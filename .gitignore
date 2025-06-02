@@ -36,6 +36,9 @@ venv.bak/
 blog_html/
 *.html
 
+# Logo file exception - keep this tracked
+!qrtick-logo-alt.svg
+
 # IDEs and editors
 .vscode/
 .idea/
