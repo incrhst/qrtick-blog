@@ -12,6 +12,7 @@ import os
 import re
 import markdown
 import yaml
+import shutil
 from datetime import datetime
 from pathlib import Path
 
@@ -191,7 +192,7 @@ class BlogGenerator:
 <body>
     <header class="header">
         <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
-            <img src="../qrtick-logo-alt.svg" alt="QRTick Logo" class="logo">
+            <img src="qrtick-logo-alt.svg" alt="QRTick Logo" class="logo">
         </a>
         <div class="nav-links">
             <a href="../index.html" class="nav-link">Docs Home</a>
@@ -203,7 +204,7 @@ class BlogGenerator:
         {content}
     </main>
     <footer class="footer">
-        <img src="../qrtick-logo-alt.svg" alt="QRTick Logo" class="footer-logo">
+        <img src="qrtick-logo-alt.svg" alt="QRTick Logo" class="footer-logo">
         <p>&copy; 2025 QRTick. Making events easier to manage and more profitable.</p>
         <p><a href="https://qrtick.com" class="footer-link" target="_blank" rel="noopener noreferrer">Visit QRTick.com</a></p>
     </footer>
@@ -344,7 +345,7 @@ class BlogGenerator:
 <body>
     <header class="header">
         <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
-            <img src="../qrtick-logo-alt.svg" alt="QRTick Logo" class="logo">
+            <img src="qrtick-logo-alt.svg" alt="QRTick Logo" class="logo">
         </a>
         <div class="nav-links">
             <a href="../index.html" class="nav-link">Docs Home</a>
@@ -358,7 +359,7 @@ class BlogGenerator:
         {blog_posts}
     </main>
     <footer class="footer">
-        <img src="../qrtick-logo-alt.svg" alt="QRTick Logo" class="footer-logo">
+        <img src="qrtick-logo-alt.svg" alt="QRTick Logo" class="footer-logo">
         <p>&copy; 2025 QRTick. Making events easier to manage and more profitable.</p>
         <p><a href="https://qrtick.com" class="footer-link" target="_blank" rel="noopener noreferrer">Visit QRTick.com</a></p>
     </footer>
@@ -529,11 +530,24 @@ class BlogGenerator:
         
         print(f"Generated blog index: {index_file}")
 
+    def copy_static_assets(self):
+        """Copy static assets like logo to output directory"""
+        logo_source = Path("qrtick-logo-alt.svg")
+        if logo_source.exists():
+            logo_dest = self.output_dir / "qrtick-logo-alt.svg"
+            shutil.copy2(logo_source, logo_dest)
+            print(f"Copied logo: {logo_source} → {logo_dest}")
+        else:
+            print("Warning: qrtick-logo-alt.svg not found in root directory")
+
     def generate_all(self):
         """Generate all blog posts and index"""
         if not self.blog_dir.exists():
             print(f"Blog directory '{self.blog_dir}' not found!")
             return
+        
+        # Copy static assets first
+        self.copy_static_assets()
         
         posts = []
         markdown_files = list(self.blog_dir.glob("*.md"))
