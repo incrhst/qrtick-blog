@@ -127,6 +127,21 @@ class BlogGenerator:
         }}
         .blog-content li {{
             margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }}
+        .blog-content ul li {{
+            list-style-type: disc;
+            margin-left: 0;
+        }}
+        .blog-content ol li {{
+            list-style-type: decimal;
+            margin-left: 0;
+        }}
+        .blog-content ul ul li {{
+            list-style-type: circle;
+        }}
+        .blog-content ul ul ul li {{
+            list-style-type: square;
         }}
         .blog-content blockquote {{
             border-left: 4px solid #FDC230;
@@ -461,8 +476,36 @@ class BlogGenerator:
 
     def markdown_to_html(self, markdown_content):
         """Convert markdown to HTML"""
+        # Ensure proper list formatting by preprocessing
+        lines = markdown_content.split('\n')
+        processed_lines = []
+        in_list = False
+        
+        for i, line in enumerate(lines):
+            # Check if this line is a bullet point
+            if line.strip().startswith('- '):
+                if not in_list:
+                    # Add blank line before list if previous line isn't empty
+                    if i > 0 and lines[i-1].strip() != '':
+                        processed_lines.append('')
+                    in_list = True
+                processed_lines.append(line)
+            else:
+                if in_list and line.strip() == '':
+                    # Keep empty lines in lists
+                    processed_lines.append(line)
+                elif in_list and line.strip() != '':
+                    # End of list - add blank line after if next line isn't a list item
+                    in_list = False
+                    processed_lines.append('')
+                    processed_lines.append(line)
+                else:
+                    processed_lines.append(line)
+        
+        processed_content = '\n'.join(processed_lines)
+        
         md = markdown.Markdown(extensions=['extra', 'codehilite', 'toc'])
-        return md.convert(markdown_content)
+        return md.convert(processed_content)
 
     def generate_blog_post(self, markdown_file):
         """Generate individual blog post HTML"""
