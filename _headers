@@ -6,9 +6,6 @@
   Referrer-Policy: strict-origin-when-cross-origin
 
 # Cache static assets
-/qrtick-logo-alt.svg
-  Cache-Control: public, max-age=31536000
-
 /icon-*.png
   Cache-Control: public, max-age=31536000
 

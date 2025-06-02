@@ -191,7 +191,7 @@ class BlogGenerator:
 <body>
     <header class="header">
         <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
-            <img src="../qrtick-logo-alt.svg" alt="QRTick Logo" class="logo">
+            <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick Logo" class="logo">
         </a>
         <div class="nav-links">
             <a href="../index.html" class="nav-link">Docs Home</a>
@@ -203,7 +203,7 @@ class BlogGenerator:
         {content}
     </main>
     <footer class="footer">
-        <img src="../qrtick-logo-alt.svg" alt="QRTick Logo" class="footer-logo">
+        <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick Logo" class="footer-logo">
         <p>&copy; 2025 QRTick. Making events easier to manage and more profitable.</p>
         <p><a href="https://qrtick.com" class="footer-link" target="_blank" rel="noopener noreferrer">Visit QRTick.com</a></p>
     </footer>
@@ -344,7 +344,7 @@ class BlogGenerator:
 <body>
     <header class="header">
         <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
-            <img src="../qrtick-logo-alt.svg" alt="QRTick Logo" class="logo">
+            <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick Logo" class="logo">
         </a>
         <div class="nav-links">
             <a href="../index.html" class="nav-link">Docs Home</a>
@@ -358,7 +358,7 @@ class BlogGenerator:
         {blog_posts}
     </main>
     <footer class="footer">
-        <img src="../qrtick-logo-alt.svg" alt="QRTick Logo" class="footer-logo">
+        <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick Logo" class="footer-logo">
         <p>&copy; 2025 QRTick. Making events easier to manage and more profitable.</p>
         <p><a href="https://qrtick.com" class="footer-link" target="_blank" rel="noopener noreferrer">Visit QRTick.com</a></p>
     </footer>
