@@ -370,7 +370,7 @@ class BlogGenerator:
     </header>
     <main class="container">
         <h1>The QR Code</h1>
-        <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Insights, innovations, and best practices for modern event technology in Jamaica.</p>
+        <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Making event management stress-free for organizers across Jamaica.</p>
         {blog_posts}
     </main>
     <footer class="footer">
