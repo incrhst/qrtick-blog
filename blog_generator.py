@@ -202,6 +202,34 @@ class BlogGenerator:
         .back-to-blog:hover {{
             background-color: #e5af2b;
         }}
+        .blog-content img {{
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(61, 57, 57, 0.1);
+            margin: 1.5rem 0;
+            display: block;
+        }}
+        .blog-content img[alt*="before"],
+        .blog-content img[alt*="Before"],
+        .blog-content img[alt*="vs"],
+        .blog-content img[alt*="comparison"] {{
+            max-width: 800px;
+            width: 100%;
+        }}
+        .blog-content img[alt*="dashboard"],
+        .blog-content img[alt*="Dashboard"],
+        .blog-content img[alt*="screenshot"],
+        .blog-content img[alt*="Screenshot"] {{
+            max-width: 600px;
+            width: 100%;
+        }}
+        @media (max-width: 768px) {{
+            .blog-content img {{
+                max-width: 100%;
+                margin: 1rem 0;
+            }}
+        }}
     </style>
 </head>
 <body>
