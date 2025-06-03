@@ -45,6 +45,9 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 ### **New: Individual Event Sales Control**
 **Perfect for seasons and series.** You can now close online sales for any specific event in your season while keeping other performances open for online sales.
 
+![Sales control dashboard showing how to close individual events and the professional customer message](./images/qrtick-platform-updates-june-2025/sales-control.jpg)
+*Left: Easy toggle control in your dashboard. Right: Professional message customers see - no disappointment, clear next steps*
+
 **Why this matters for your season:**
 - **Friday night sold out?** Close online sales but keep Saturday's show open
 - **Opening night strategy** - Close online early to create excitement at the gate
@@ -115,6 +118,9 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 
 ### **Ready for Your Next Event**
 **Know your numbers instantly.** Enhanced dashboards show you what matters most for your upcoming events.
+
+![Real-time event dashboard showing revenue vs comp tickets and live attendance tracking](./images/qrtick-platform-updates-june-2025/dashboard-screen.jpg)
+*See everything that matters during your event - real revenue, comp tracking, and live attendance*
 
 **At a glance, see:**
 - **Real revenue vs. complimentary tickets** - know your actual earnings
