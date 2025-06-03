@@ -19,7 +19,7 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 ### **Professional Event Programmes**
 **Skip the printing costs and last-minute changes.** Our digital programme service creates beautiful, mobile-friendly programmes that make your event look professional.
 
-![Before: Basic printed program vs After: Professional digital programme on mobile](./images/qrtick-platform-updates-june-2025/digital-programmes-before-after.jpg)
+![Before: Basic printed program vs After: Professional digital programme on mobile](./images/qrtick-platform-updates-june-2025/before-after.jpg)
 *From amateur-looking printouts to professional digital programmes that impress your audience*
 
 **Perfect for your next event:**
@@ -45,7 +45,7 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 ### **New: Individual Event Sales Control**
 **Perfect for seasons and series.** You can now close online sales for any specific event in your season while keeping other performances open for online sales.
 
-![Sales control dashboard showing how to close individual events and the professional customer message](./images/qrtick-platform-updates-june-2025/sales-control.jpg)
+![Sales control dashboard showing how to close individual events and the professional customer message](./images/qrtick-platform-updates-june-2025/sale-control.jpg)
 *Left: Easy toggle control in your dashboard. Right: Professional message customers see - no disappointment, clear next steps*
 
 **Why this matters for your season:**
