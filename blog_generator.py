@@ -574,7 +574,8 @@ class BlogGenerator:
         print(f"Generated blog index: {index_file}")
 
     def copy_static_assets(self):
-        """Copy static assets like logo to output directory"""
+        """Copy static assets like logo and images to output directory"""
+        # Copy logo
         logo_source = Path("qrtick-logo-alt.svg")
         if logo_source.exists():
             logo_dest = self.output_dir / "qrtick-logo-alt.svg"
@@ -582,6 +583,17 @@ class BlogGenerator:
             print(f"Copied logo: {logo_source} → {logo_dest}")
         else:
             print("Warning: qrtick-logo-alt.svg not found in root directory")
+        
+        # Copy images directory
+        images_source = Path("images")
+        if images_source.exists():
+            images_dest = self.output_dir / "images"
+            if images_dest.exists():
+                shutil.rmtree(images_dest)
+            shutil.copytree(images_source, images_dest)
+            print(f"Copied images: {images_source} → {images_dest}")
+        else:
+            print("Info: images/ directory not found (create it to include images in blog)")
 
     def generate_all(self):
         """Generate all blog posts and index"""

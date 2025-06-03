@@ -19,6 +19,9 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 ### **Professional Event Programmes**
 **Skip the printing costs and last-minute changes.** Our digital programme service creates beautiful, mobile-friendly programmes that make your event look professional.
 
+![Before: Basic printed program vs After: Professional digital programme on mobile](./images/qrtick-platform-updates-june-2025/digital-programmes-before-after.jpg)
+*From amateur-looking printouts to professional digital programmes that impress your audience*
+
 **Perfect for your next event:**
 - **Theater productions** - Cast bios, synopsis, and production credits
 - **Conferences** - Speaker profiles, schedules, and session details  
