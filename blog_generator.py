@@ -32,6 +32,41 @@ class BlogGenerator:
             'border_color': '#E5E5E5'
         }
     
+    def parse_date(self, date_str):
+        """Parse date string in various formats and return a datetime object for sorting"""
+        if not date_str:
+            return datetime.min
+        
+        # Remove quotes if present
+        date_str = date_str.strip('"\'')
+        
+        # Try different date formats
+        formats = [
+            "%B %d, %Y",    # "June 4, 2025"
+            "%B %Y",        # "June 2025" 
+            "%Y-%m-%d",     # "2025-06-04"
+            "%m/%d/%Y",     # "06/04/2025"
+        ]
+        
+        for fmt in formats:
+            try:
+                return datetime.strptime(date_str, fmt)
+            except ValueError:
+                continue
+        
+        # If no format matches, try to extract year and month
+        try:
+            # Handle formats like "May 2025"
+            if re.match(r'^[A-Za-z]+ \d{4}$', date_str):
+                # For month-year format, default to first day of month
+                return datetime.strptime(date_str, "%B %Y")
+        except ValueError:
+            pass
+        
+        # If all else fails, return a very old date so it appears last
+        print(f"Warning: Could not parse date '{date_str}', using fallback")
+        return datetime.min
+    
     def get_html_template(self):
         """Modern HTML template inspired by clean blog designs"""
         return """<!DOCTYPE html>
@@ -809,7 +844,7 @@ class BlogGenerator:
         sorted_posts = sorted(posts, key=lambda p: (
             not p['data'].get('pinned', False),
             not p['data'].get('featured', False),
-            p['data'].get('date', '')
+            self.parse_date(p['data'].get('date')).timestamp()
         ), reverse=True)
         
         for i, post in enumerate(sorted_posts):
