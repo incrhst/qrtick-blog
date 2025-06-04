@@ -856,6 +856,22 @@ class BlogGenerator:
         
         return self.get_index_template().format(posts=posts_html)
     
+    def copy_images(self):
+        """Copy images directory to output directory"""
+        images_source = Path("images")
+        images_dest = self.output_dir / "images"
+        
+        if images_source.exists():
+            # Remove existing images directory if it exists
+            if images_dest.exists():
+                shutil.rmtree(images_dest)
+            
+            # Copy entire images directory
+            shutil.copytree(images_source, images_dest)
+            print("🖼️  Copied images directory to output")
+        else:
+            print("⚠️  No images directory found")
+    
     def generate_blog(self):
         """Main function to generate the entire blog"""
         print("🚀 Generating QRTick Blog...")
@@ -866,6 +882,9 @@ class BlogGenerator:
         if logo_source.exists():
             shutil.copy2(logo_source, logo_dest)
             print("📄 Copied logo to output directory")
+        
+        # Copy images directory
+        self.copy_images()
         
         # Process all markdown files
         posts = []
