@@ -909,6 +909,9 @@ class BlogGenerator:
                 # Convert markdown to HTML
                 content_html = markdown_processor.convert(markdown_content)
                 
+                # Fix image paths - remove ./ prefix since HTML files are in root of blog_html
+                content_html = content_html.replace('src="./images/', 'src="images/')
+                
                 # Generate slug if not provided
                 slug = frontmatter.get('slug') or re.sub(r'[^a-zA-Z0-9\-_]', '-', frontmatter.get('title', md_file.stem).lower()).strip('-')
                 frontmatter['slug'] = slug
