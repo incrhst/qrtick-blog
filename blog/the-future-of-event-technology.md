@@ -1,6 +1,6 @@
 ---
 title: "The Future of Event Technology: How QR Codes Are Revolutionizing Event Management"
-date: "January 2025"
+date: "May 2025"
 author: "QRTick Team"
 slug: "future-of-event-technology-qr-codes"
 excerpt: "Why QR codes have become the backbone of modern event management - from streamlined check-ins to rich data insights, discover how QR code technology is transforming events in Jamaica."

@@ -1,6 +1,6 @@
 ---
 title: "Perfect Timing: Take Control of When Your Tickets Go on Sale"
-date: "January 2025"
+date: "June 4, 2025"
 author: "QRTick Team"
 slug: "ticket-availability-control"
 excerpt: "New precise ticket timing controls let you create excitement, manage demand, and maximize revenue by controlling exactly when each ticket type becomes available for purchase."
@@ -34,9 +34,9 @@ tags: ["features", "sales-control", "ticket-timing", "revenue-optimization", "ev
 **No more manual switching.** Once you set up your timing rules, everything happens automatically:
 
 **Option 1: Set Exact Times**
-- Early Bird tickets: Available January 15th at 10:00 AM
-- Regular tickets: Available February 1st at 10:00 AM  
-- VIP tickets: Available February 15th at 12:00 PM
+- Early Bird tickets: Available July 15th at 10:00 AM
+- Regular tickets: Available August 1st at 10:00 AM  
+- VIP tickets: Available August 15th at 12:00 PM
 
 **Option 2: Set Days Before Your Event**
 - Member tickets: Available 30 days before the event
@@ -117,8 +117,8 @@ tags: ["features", "sales-control", "ticket-timing", "revenue-optimization", "ev
 
 **1. Calendar Dates and Times**
 Perfect when you know exactly when you want sales to start:
-- "VIP tickets available December 1st at 2:00 PM"
-- "Early bird ends January 15th at midnight"
+- "VIP tickets available July 1st at 2:00 PM"
+- "Early bird ends July 15th at midnight"
 
 **2. Days Before Event**  
 Perfect for consistent timing across multiple events:

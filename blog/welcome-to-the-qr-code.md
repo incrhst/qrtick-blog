@@ -1,6 +1,6 @@
 ---
 title: "Welcome to The QR Code"
-date: "January 2025"
+date: "April 2025"
 author: "QRTick Team"
 slug: "welcome-to-the-qr-code"
 excerpt: "Finally - a resource that understands event organizing is stressful enough without worrying about technology. We're here to make your events easier to manage."

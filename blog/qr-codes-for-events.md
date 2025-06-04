@@ -1,6 +1,6 @@
 ---
 title: "Stop Worrying About Event Check-In (Here's How)"
-date: "January 2025"
+date: "May 2025"
 author: "QRTick Team"
 slug: "stop-worrying-about-event-checkin"
 excerpt: "The 3am worry that keeps every event organizer awake: 'What if check-in is a disaster?' Here's how to make that worry disappear forever."
