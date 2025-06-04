@@ -23,16 +23,19 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 *From amateur-looking printouts to professional digital programmes that impress your audience*
 
 **Perfect for your next event:**
+
 - **Theater productions** - Cast bios, synopsis, and production credits
 - **Conferences** - Speaker profiles, schedules, and session details  
 - **Fundraisers** - Mission statements, sponsor recognition, and impact stories
 - **Concerts** - Artist information, set lists, and venue details
 
 **See what's possible:**
+
 - **Theater Festival Example:** [Tentastic Theatre Festival Programme](https://p.qrtick.com/tentastic-theatre-festival/)
 - **Dance Company Event Example:** [Invitation to Worship Programme](https://p.qrtick.com/invitation-to-worship/)
 
 **Why your attendees will love it:**
+
 - **Always accessible** - Works on any phone or tablet
 - **No printing waste** - Environmentally friendly
 - **Easy to share** - Send links via social media or email
@@ -49,6 +52,7 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 *Left: Easy toggle control in your dashboard. Right: Professional message customers see - no disappointment, clear next steps*
 
 **Why this matters for your season:**
+
 - **Friday night sold out?** Close online sales but keep Saturday's show open
 - **Opening night strategy** - Close online early to create excitement at the gate
 - **Weather concerns** - Close just the outdoor performance while indoor shows stay open
@@ -57,6 +61,7 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 - **Premium pricing strategy** - Charge higher prices at the gate for high-demand shows while keeping online prices lower for other performances
 
 **Perfect for your upcoming shows:**
+
 - Theater shows where you want to fill remaining seats at the door
 - Fundraisers where personal interaction increases donations
 - Events where weather might affect capacity
@@ -70,6 +75,7 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 **Reach more customers** with PayPal payment options alongside your existing payment methods.
 
 **What this means for your ticket sales:**
+
 - **Higher conversion rates** - customers use their preferred payment method
 - **International attendees** can easily purchase tickets when their cards don't work with local processors
 - **Fewer abandoned carts** when customers hit payment roadblocks
@@ -101,12 +107,14 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 **Stop manually managing free tickets.** Our new system handles complimentary tickets automatically while keeping your finances clear.
 
 **Perfect for:**
+
 - **Press and media** - Send professional tickets instantly
 - **Sponsors and donors** - Show appreciation with easy comp tickets
 - **VIP guests** - Handle special attendees seamlessly
 - **Staff and volunteers** - Reward your team without paperwork
 
 **Built-in benefits:**
+
 - **Separate tracking** so you know your real revenue vs. comps
 - **Automatic emails** with professional tickets
 - **Capacity protection** - comps won't oversell your event
@@ -123,11 +131,13 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 *See everything that matters during your event - real revenue, comp tracking, and live attendance*
 
 **At a glance, see:**
+
 - **Real revenue vs. complimentary tickets** - know your actual earnings
 - **Live attendance tracking** - see who's actually showing up
 - **Sales by event** - identify your most successful performances
 
 **Use this information for your next event to:**
+
 - **Price future events better** based on demand patterns
 - **Plan capacity** more accurately
 - **Improve marketing** by seeing what works
@@ -141,11 +151,13 @@ tags: ["updates", "features", "digital-programmes", "sales-control", "payments",
 These updates solve real problems Jamaican event organizers face every day:
 
 **For Fundraisers:**
+
 - Close online sales to encourage personal connections at the door
 - Professional appearance builds donor confidence
 - Easy comp tickets for major donors and board members
 
 **For Theater:**
+
 - Control sales per performance in your season
 - Professional emails make community theater look polished
 - Flexible payment options reach more audience members
@@ -166,6 +178,7 @@ These updates solve real problems Jamaican event organizers face every day:
 
 ### **No Setup Required**
 These improvements are already working for your next event:
+
 - **PayPal payments** - automatically available at checkout
 - **Professional design** - visible immediately on your event pages
 - **Better emails** - all new confirmations use improved templates

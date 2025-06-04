@@ -215,7 +215,18 @@ This creates:
 
 ### View the Blog
 
-Open `blog_html/index.html` in your browser to view the complete blog.
+#### Option 1: Local Server (Recommended)
+```bash
+# Start local development server
+python serve.py
+```
+This will automatically:
+- Start a server at `http://localhost:8000`
+- Open your browser to view the blog
+- Allow you to navigate between pages properly
+
+#### Option 2: Direct File Access
+Open `blog_html/index.html` in your browser to view the blog directly.
 
 ## 📁 Project Structure
 
@@ -271,19 +282,41 @@ Check `blog_html/[your-slug].html` for the generated post.
 
 ## 🎨 Design and Branding
 
-The blog follows QRTick's brand guidelines:
+The blog features a modern, clean design inspired by contemporary blog layouts:
+
+### Design Philosophy
+- **Clean & Minimal**: Inspired by Anthropic's clean layout principles
+- **Content-First**: Typography and spacing optimized for reading
+- **Modern Interface**: Contemporary design patterns with subtle animations
+- **Mobile-Responsive**: Optimized for all device sizes
 
 ### Colors
-- **Brand Dark Gray**: `#3D3939` (headers, text)
-- **Brand Gold**: `#FDC230` (accents, buttons)
-- **Off White**: `#FFF9EA` (backgrounds)
-- **Light Gray**: `#EEEEEE` (cards, meta info)
+- **Primary Text**: `#2D2D2D` (darker, more readable)
+- **Secondary Text**: `#666666` (meta information)
+- **Background**: `#FFFFFF` (clean white)
+- **Accent**: `#FDC230` (QRTick brand gold)
+- **Hero Gradient**: `linear-gradient(135deg, #FFF9EA 0%, #FFFFFF 100%)`
+- **Borders**: `#E5E5E5` (subtle separation)
 
 ### Typography
-- **Font Family**: Montserrat (Google Fonts)
-- **Headings**: Montserrat Bold (700) / Semibold (600)
-- **Body Text**: Montserrat Regular (400)
-- **Code**: Monaco, Menlo, Ubuntu Mono
+- **Font Family**: Inter (modern, highly readable)
+- **Headings**: Inter Bold (700) / Semibold (600)
+- **Body Text**: Inter Regular (400)
+- **Code**: SF Mono, Monaco, Menlo, Consolas
+- **Letter Spacing**: Optimized for digital reading
+
+### Layout Structure
+- **Sticky Header**: Clean navigation with logo and primary CTA
+- **Hero Section**: Gradient background with centered title and tagline
+- **Featured Post**: Large card with special highlighting for pinned/featured content
+- **Post Grid**: Clean list with hover effects and reading time estimates
+- **Footer**: Minimal with key links and branding
+
+### Interactive Elements
+- **Hover Effects**: Subtle animations on cards and links
+- **Reading Time**: Automatic calculation based on word count
+- **Tag System**: Color-coded tags for easy categorization
+- **Mobile-First**: Responsive design that works on all devices
 
 ### Voice and Tone
 - Tech-savvy and professional

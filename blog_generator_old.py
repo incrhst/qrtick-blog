@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-QRTick Blog Generator - Modern Edition
+QRTick Blog Generator
 
 This script reads markdown files from the blog folder and generates:
 1. Individual HTML blog post pages
@@ -112,6 +112,40 @@ class BlogGenerator:
         .nav-link.primary:hover {{
             background: #1A1A1A;
             color: #FFFFFF;
+        }}
+        
+        .hero-section {{
+            background: linear-gradient(135deg, #FFF9EA 0%, #FFFFFF 100%);
+            padding: 4rem 0 3rem 0;
+            text-align: center;
+            border-bottom: 1px solid #E5E5E5;
+        }}
+        
+        .hero-container {{
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }}
+        
+        .blog-title {{
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2D2D2D;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }}
+        
+        .blog-subtitle {{
+            font-size: 1.25rem;
+            color: #666666;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }}
+        
+        .blog-tagline {{
+            font-size: 1rem;
+            color: #888888;
+            margin-top: 0.5rem;
         }}
         
         .main-container {{
@@ -304,6 +338,14 @@ class BlogGenerator:
             
             .nav-links {{
                 gap: 1rem;
+            }}
+            
+            .blog-title {{
+                font-size: 2.25rem;
+            }}
+            
+            .blog-subtitle {{
+                font-size: 1.1rem;
             }}
             
             .main-container {{
@@ -775,24 +817,22 @@ class BlogGenerator:
         read_time = max(1, len(content_html.split()) // 200)  # Estimate reading time
         
         post_content = f"""
-        <main class="main-container">
-            <a href="index.html" class="back-to-blog">← Back to Blog</a>
-            
-            <article>
-                <header class="post-header">
-                    <h1 class="post-title">{post_data.get('title', 'Untitled')}</h1>
-                    <div class="post-meta">
-                        <span>📅 {post_data.get('date', 'Unknown Date')}</span>
-                        <span>👤 {post_data.get('author', 'QRTick Team')}</span>
-                        <span>⏱️ {read_time} min read</span>
-                    </div>
-                </header>
-                
-                <div class="blog-content">
-                    {content_html}
+        <a href="index.html" class="back-to-blog">← Back to Blog</a>
+        
+        <article>
+            <header class="post-header">
+                <h1 class="post-title">{post_data.get('title', 'Untitled')}</h1>
+                <div class="post-meta">
+                    <span>📅 {post_data.get('date', 'Unknown Date')}</span>
+                    <span>👤 {post_data.get('author', 'QRTick Team')}</span>
+                    <span>⏱️ {read_time} min read</span>
                 </div>
-            </article>
-        </main>
+            </header>
+            
+            <div class="blog-content">
+                {content_html}
+            </div>
+        </article>
         """
         
         return self.get_html_template().format(
@@ -869,77 +909,6 @@ class BlogGenerator:
         
         # Process all markdown files
         posts = []
-        markdown_processor = markdown.Markdown(extensions=[
-            'markdown.extensions.extra',
-            'markdown.extensions.codehilite',
-            'markdown.extensions.toc',
-            'markdown.extensions.tables',
-            'markdown.extensions.fenced_code'
-        ])
+        markdown_processor = markdown.Markdown(extensions=['fenced_code', 'tables', 'toc'])
         
-        for md_file in self.blog_dir.glob("*.md"):
-            print(f"📝 Processing: {md_file.name}")
-            
-            try:
-                with open(md_file, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                
-                # Parse frontmatter and content
-                frontmatter, markdown_content = self.parse_frontmatter(content)
-                
-                # Convert markdown to HTML
-                content_html = markdown_processor.convert(markdown_content)
-                
-                # Generate slug if not provided
-                slug = frontmatter.get('slug') or re.sub(r'[^a-zA-Z0-9\-_]', '-', frontmatter.get('title', md_file.stem).lower()).strip('-')
-                frontmatter['slug'] = slug
-                
-                # Generate individual post HTML
-                post_html = self.generate_post_html(frontmatter, content_html)
-                
-                # Write post file
-                post_file = self.output_dir / f"{slug}.html"
-                with open(post_file, 'w', encoding='utf-8') as f:
-                    f.write(post_html)
-                
-                # Store post data for index generation
-                posts.append({
-                    'data': frontmatter,
-                    'content': markdown_content
-                })
-                
-                print(f"✅ Generated: {slug}.html")
-                
-            except Exception as e:
-                print(f"❌ Error processing {md_file.name}: {e}")
-        
-        # Generate index page
-        if posts:
-            index_html = self.generate_index_html(posts)
-            index_file = self.output_dir / "index.html"
-            with open(index_file, 'w', encoding='utf-8') as f:
-                f.write(index_html)
-            print(f"🏠 Generated blog index with {len(posts)} posts")
-        else:
-            print("⚠️ No posts found to generate index")
-        
-        print(f"🎉 Blog generation complete! View at {self.output_dir}/index.html")
-
-def main():
-    """Main function to run the blog generator"""
-    import sys
-    
-    # Check if required libraries are available
-    try:
-        import markdown
-        import yaml
-    except ImportError as e:
-        print(f"Error: Missing required library: {e}")
-        print("Install with: pip install markdown PyYAML")
-        sys.exit(1)
-    
-    generator = BlogGenerator()
-    generator.generate_blog()
-
-if __name__ == "__main__":
-    main()
+        for md_
