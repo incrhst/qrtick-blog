@@ -52,6 +52,24 @@ tags: ["features", "sales-control", "ticket-timing", "revenue-optimization", "ev
 - Instantly enable or disable any ticket type
 - Perfect for last-minute changes or special circumstances
 
+### **Automatic Sales Closing - Never Miss a Deadline**
+
+**Here's the game-changer:** You can schedule when ticket sales close and they'll close automatically. No more staying up late to manually stop sales or worrying about tickets selling when they shouldn't.
+
+**Set it once, forget about it:**
+
+- Early bird pricing automatically ends at midnight on July 15th
+- VIP sales automatically stop 1 week before your event  
+- General admission closes 2 hours before event start
+- **You sleep peacefully** knowing everything happens on schedule
+
+**Perfect for:**
+
+- **Pricing deadlines** - Early bird rates end exactly when planned
+- **Logistics cutoffs** - Stop sales when you need prep time
+- **Capacity management** - Close when you hit your target numbers
+- **Peace of mind** - Never accidentally oversell or miss a deadline
+
 ---
 
 ## 💰 **Real Revenue Benefits**
