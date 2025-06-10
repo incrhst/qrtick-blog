@@ -34,8 +34,8 @@ Every successful event organizer in Jamaica asks these same questions:
 
 ### **See Your Real Numbers, Not Gross Sales**
 
-![Revenue dashboard showing net revenue vs gross sales with payment fee breakdown](./images/maximize-event-revenue-june-2025/revenue-dashboard.jpg)
-*Left: What you used to see (confusing). Right: What you see now (crystal clear)*
+![Revenue dashboard showing comprehensive breakdown with JMD 124,500 net revenue, 44 tickets sold, 54 complimentary tickets, and detailed ticket type analysis](./images/maximize-event-revenue-june-2025/revenue-dashboard.jpg)
+*Your new revenue dashboard - see everything that matters at a glance: net revenue, ticket breakdown, payment methods, and comp tracking*
 
 **The game-changer:** We now show you **exactly what money hits your bank account** after all payment processing fees.
 
