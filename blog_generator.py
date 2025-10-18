@@ -13,6 +13,7 @@ import re
 import markdown
 import yaml
 import shutil
+import json
 from datetime import datetime
 from pathlib import Path
 
@@ -76,9 +77,8 @@ class BlogGenerator:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} - QRTick Blog</title>
     <meta name="description" content="{description}">
-    <link rel="icon" type="image/png" sizes="32x32" href="../icon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../icon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../icon-180x180.png">
+    <link rel="icon" type="image/png" href="https://brand.qrtick.com/png-logos/qrtickicon.png">
+    <link rel="shortcut icon" href="https://brand.qrtick.com/png-logos/qrtickicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {{
@@ -113,14 +113,25 @@ class BlogGenerator:
             align-items: center;
         }}
         
+        .nav-left {{
+            display: flex;
+            align-items: center;
+        }}
+        
+        .nav-right {{
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+        }}
+        
         .logo {{
-            height: 40px;
+            height: 30px;
             width: auto;
         }}
         
         .nav-links {{
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
             align-items: center;
         }}
         
@@ -291,7 +302,7 @@ class BlogGenerator:
         }}
         
         .footer {{
-            background: #F8F9FA;
+            background: #FFFFFF;
             padding: 3rem 0 2rem 0;
             margin-top: 4rem;
             border-top: 1px solid #E5E5E5;
@@ -302,6 +313,9 @@ class BlogGenerator:
             max-width: 800px;
             margin: 0 auto;
             padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
         }}
         
         .footer-logo {{
@@ -376,31 +390,24 @@ class BlogGenerator:
 <body>
     <header class="header">
         <div class="header-container">
-            <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
-                <img src="qrtick-logo-alt.svg" alt="QRTick" class="logo">
-            </a>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link">Blog</a>
-                <a href="../index.html" class="nav-link">Docs</a>
-                <a href="https://qrtick.com" class="nav-link" target="_blank" rel="noopener noreferrer">QRTick.com</a>
-                <a href="https://qrtick.com" class="nav-link primary" target="_blank" rel="noopener noreferrer">Try QRTick</a>
-            </nav>
+            <div class="nav-left">
+                <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick" class="logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <nav class="nav-links">
+                    <a href="/blog" class="nav-link">Blog</a>
+                    <a href="https://docs.qrtick.com" class="nav-link" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a href="https://qrtick.com" class="nav-link primary" target="_blank" rel="noopener noreferrer">Try QRTick</a>
+                </nav>
+            </div>
         </div>
     </header>
     
     {content}
     
-    <footer class="footer">
-        <div class="footer-content">
-            <img src="qrtick-logo-alt.svg" alt="QRTick" class="footer-logo">
-            <p class="footer-text">Making event management stress-free for organizers across Jamaica</p>
-            <div class="footer-links">
-                <a href="https://qrtick.com" class="footer-link" target="_blank" rel="noopener noreferrer">QRTick.com</a>
-                <a href="../index.html" class="footer-link">Documentation</a>
-                <a href="index.html" class="footer-link">Blog Home</a>
-            </div>
-        </div>
-    </footer>
+    {footer_html}
 </body>
 </html>"""
 
@@ -412,10 +419,9 @@ class BlogGenerator:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The QR Code - QRTick Blog</title>
-    <meta name="description" content="Making event management stress-free for organizers across Jamaica. Tips, insights, and solutions for better events.">
-    <link rel="icon" type="image/png" sizes="32x32" href="../icon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../icon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../icon-180x180.png">
+    <meta name="description" content="Making event management stress-free for organisers across Jamaica. Tips, insights, and solutions for better events.">
+    <link rel="icon" type="image/png" href="https://brand.qrtick.com/png-logos/qrtickicon.png">
+    <link rel="shortcut icon" href="https://brand.qrtick.com/png-logos/qrtickicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {{
@@ -450,14 +456,25 @@ class BlogGenerator:
             align-items: center;
         }}
         
+        .nav-left {{
+            display: flex;
+            align-items: center;
+        }}
+        
+        .nav-right {{
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+        }}
+        
         .logo {{
-            height: 40px;
+            height: 30px;
             width: auto;
         }}
         
         .nav-links {{
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
             align-items: center;
         }}
         
@@ -668,7 +685,7 @@ class BlogGenerator:
         }}
         
         .footer {{
-            background: #F8F9FA;
+            background: #FFFFFF;
             padding: 3rem 0 2rem 0;
             margin-top: 4rem;
             border-top: 1px solid #E5E5E5;
@@ -679,6 +696,9 @@ class BlogGenerator:
             max-width: 800px;
             margin: 0 auto;
             padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
         }}
         
         .footer-logo {{
@@ -754,22 +774,25 @@ class BlogGenerator:
 <body>
     <header class="header">
         <div class="header-container">
-            <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
-                <img src="qrtick-logo-alt.svg" alt="QRTick" class="logo">
-            </a>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link">Blog</a>
-                <a href="../index.html" class="nav-link">Docs</a>
-                <a href="https://qrtick.com" class="nav-link" target="_blank" rel="noopener noreferrer">QRTick.com</a>
-                <a href="https://qrtick.com" class="nav-link primary" target="_blank" rel="noopener noreferrer">Try QRTick</a>
-            </nav>
+            <div class="nav-left">
+                <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick" class="logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <nav class="nav-links">
+                    <a href="/blog" class="nav-link">Blog</a>
+                    <a href="https://docs.qrtick.com" class="nav-link" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a href="https://qrtick.com" class="nav-link primary" target="_blank" rel="noopener noreferrer">Try QRTick</a>
+                </nav>
+            </div>
         </div>
     </header>
     
     <div class="hero-section">
         <div class="hero-container">
             <h1 class="blog-title">The QR Code</h1>
-            <p class="blog-subtitle">Making event management stress-free for organizers across Jamaica</p>
+            <p class="blog-subtitle">Making event management stress-free for organisers across Jamaica</p>
             <p class="blog-tagline">Tips, insights, and solutions for better events</p>
         </div>
     </div>
@@ -778,17 +801,7 @@ class BlogGenerator:
         {posts}
     </main>
     
-    <footer class="footer">
-        <div class="footer-content">
-            <img src="qrtick-logo-alt.svg" alt="QRTick" class="footer-logo">
-            <p class="footer-text">Making event management stress-free for organizers across Jamaica</p>
-            <div class="footer-links">
-                <a href="https://qrtick.com" class="footer-link" target="_blank" rel="noopener noreferrer">QRTick.com</a>
-                <a href="../index.html" class="footer-link">Documentation</a>
-                <a href="index.html" class="footer-link">Blog Home</a>
-            </div>
-        </div>
-    </footer>
+    {footer_html}
 </body>
 </html>"""
 
@@ -811,7 +824,7 @@ class BlogGenerator:
         
         post_content = f"""
         <main class="main-container">
-            <a href="index.html" class="back-to-blog">← Back to Blog</a>
+            <a href="/blog" class="back-to-blog">← Back to Blog</a>
             
             <article>
                 <header class="post-header">
@@ -824,16 +837,38 @@ class BlogGenerator:
                 </header>
                 
                 <div class="blog-content">
+                    <!-- QRTick Overview Section -->
+                    <div class="qrtick-overview" style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #FDC230;">
+                        <h3 style="margin-top: 0; color: #2D2D2D;">About QRTick</h3>
+                        <p style="margin-bottom: 0; color: #666666; line-height: 1.6;">
+                            QRTick is Jamaica's premier event management platform, designed for theatre events, technology conferences, hackathons, and community gatherings. We provide an all-inclusive digital ticketing solution that handles everything from setup to check-in, allowing event organisers to focus on content and attendee experience rather than ticketing logistics.
+                        </p>
+                    </div>
+                    
                     {content_html}
+                    
+                    <!-- CTA Section -->
+                    <div class="blog-cta" style="background: linear-gradient(135deg, #2D2D2D 0%, #1A1A1A 100%); padding: 2rem; border-radius: 12px; margin-top: 3rem; text-align: center; color: white;">
+                        <h3 style="margin-top: 0; color: white; font-size: 1.5rem;">Ready to get started?</h3>
+                        <p style="margin-bottom: 1.5rem; color: #E0E0E0; font-size: 1.1rem;">
+                            Join event organisers across Jamaica who trust QRTick for seamless event management.
+                        </p>
+                        <a href="https://tally.so/r/nW4Nak" target="_blank" rel="noopener noreferrer" 
+                           style="display: inline-block; background: #FDC230; color: #2D2D2D; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease;">
+                            Create Your Event
+                        </a>
+                    </div>
                 </div>
             </article>
         </main>
         """
         
+        footer_html = self.generate_footer_from_config()
         return self.get_html_template().format(
             title=post_data.get('title', 'Untitled'),
             description=post_data.get('excerpt', 'QRTick Blog Post'),
-            content=post_content
+            content=post_content,
+            footer_html=footer_html
         )
     
     def generate_index_html(self, posts):
@@ -863,33 +898,34 @@ class BlogGenerator:
                 posts_html += f"""
                 <article class="featured-post">
                     {'<div class="featured-badge">Featured</div>' if post_data.get('featured') else ''}
-                    <h2><a href="{post_data.get('slug', 'untitled')}.html">{post_data.get('title', 'Untitled')}</a></h2>
+                    <h2><a href="/blog/{post_data.get('slug', 'untitled')}.html">{post_data.get('title', 'Untitled')}</a></h2>
                     <div class="blog-meta">
                         <span>📅 {post_data.get('date', 'Unknown Date')}</span>
                         <span>👤 {post_data.get('author', 'QRTick Team')}</span>
                         <span>⏱️ {read_time} min read</span>
                     </div>
                     <div class="blog-excerpt">{post_data.get('excerpt', 'No excerpt available.')}</div>
-                    <a href="{post_data.get('slug', 'untitled')}.html" class="read-more">Read full post</a>
+                    <a href="/blog/{post_data.get('slug', 'untitled')}.html" class="read-more">Read full post</a>
                     {tags_html}
                 </article>
                 """
             else:
                 posts_html += f"""
                 <article class="blog-post">
-                    <h2><a href="{post_data.get('slug', 'untitled')}.html">{post_data.get('title', 'Untitled')}</a></h2>
+                    <h2><a href="/blog/{post_data.get('slug', 'untitled')}.html">{post_data.get('title', 'Untitled')}</a></h2>
                     <div class="blog-meta">
                         <span>📅 {post_data.get('date', 'Unknown Date')}</span>
                         <span>👤 {post_data.get('author', 'QRTick Team')}</span>
                         <span>⏱️ {read_time} min read</span>
                     </div>
                     <div class="blog-excerpt">{post_data.get('excerpt', 'No excerpt available.')}</div>
-                    <a href="{post_data.get('slug', 'untitled')}.html" class="read-more">Read full post</a>
+                    <a href="/blog/{post_data.get('slug', 'untitled')}.html" class="read-more">Read full post</a>
                     {tags_html}
                 </article>
                 """
         
-        return self.get_index_template().format(posts=posts_html)
+        footer_html = self.generate_footer_from_config()
+        return self.get_index_template().format(posts=posts_html, footer_html=footer_html)
     
     def copy_images(self):
         """Copy images directory to output directory"""
@@ -907,6 +943,86 @@ class BlogGenerator:
         else:
             print("⚠️  No images directory found")
     
+    def copy_favicon(self):
+        """Copy favicon from main project to blog output"""
+        # Try to find favicon in the main project
+        favicon_paths = [
+            Path("../public/favicon.png"),
+            Path("../api/static/qrtickicon.svg"),
+            Path("qrtick-logo-alt.svg")
+        ]
+        
+        for favicon_path in favicon_paths:
+            if favicon_path.exists():
+                favicon_dest = self.output_dir / "favicon.png"
+                shutil.copy2(favicon_path, favicon_dest)
+                print(f"📄 Copied favicon from {favicon_path}")
+                return
+        
+        print("⚠️  No favicon found to copy")
+    
+    def load_footer_config(self):
+        """Load shared footer configuration from JSON file"""
+        config_path = Path("../shared_footer_config.json")
+        if config_path.exists():
+            with open(config_path, 'r') as f:
+                return json.load(f)
+        return None
+    
+    def generate_footer_from_config(self):
+        """Generate footer HTML from shared configuration"""
+        config = self.load_footer_config()
+        if not config:
+            return self.get_default_footer()
+        
+        # Build footer HTML from config
+        footer_html = f"""
+        <footer class="footer" style="background: {config['styles']['background']}; color: {config['styles']['color']}; padding: {config['styles']['padding']}; margin-top: {config['styles']['margin_top']}; border-top: {config['styles']['border_top']}; text-align: center;">
+            <div class="footer-content" style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
+                <img src="{config['logo']['url']}" alt="{config['logo']['alt']}" style="height: {config['logo']['height']}; margin-bottom: 1rem;">
+                <p style="color: #666666; font-size: 0.9rem; margin-bottom: 1rem;">
+                    {config['tagline']}
+                </p>
+                <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+        """
+        
+        # Add links
+        for link in config['links']:
+            external_attrs = 'target="_blank" rel="noopener noreferrer"' if link['external'] else ''
+            footer_html += f'<a href="{link["url"]}" {external_attrs} style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">{link["text"]}</a>'
+        
+        footer_html += f"""
+                </div>
+                <p style="color: #666666; font-size: 0.9rem;">
+                    {config['copyright']}
+                </p>
+            </div>
+        </footer>
+        """
+        
+        return footer_html
+    
+    def get_default_footer(self):
+        """Fallback to default footer if config not available"""
+        return """
+        <footer class="footer" style="background: #FFFFFF; color: #2D2D2D; padding: 3rem 0 2rem; margin-top: 4rem; border-top: 1px solid #E5E5E5; text-align: center;">
+            <div class="footer-content" style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
+                <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick" style="height: 32px; margin-bottom: 1rem;">
+                <p style="color: #666666; font-size: 0.9rem; margin-bottom: 1rem;">
+                    Making event management stress-free for organisers across Jamaica
+                </p>
+                <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+                    <a href="https://qrtick.com" style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">QRTick.com</a>
+                    <a href="/blog" style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">Blog</a>
+                    <a href="https://docs.qrtick.com" target="_blank" rel="noopener noreferrer" style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">Documentation</a>
+                </div>
+                <p style="color: #666666; font-size: 0.9rem;">
+                    © QRTick Jamaica. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        """
+    
     def generate_blog(self):
         """Main function to generate the entire blog"""
         print("🚀 Generating QRTick Blog...")
@@ -920,6 +1036,9 @@ class BlogGenerator:
         
         # Copy images directory
         self.copy_images()
+        
+        # Copy favicon
+        self.copy_favicon()
         
         # Process all markdown files
         posts = []
@@ -944,8 +1063,8 @@ class BlogGenerator:
                 # Convert markdown to HTML
                 content_html = markdown_processor.convert(markdown_content)
                 
-                # Fix image paths - remove ./ prefix since HTML files are in root of blog_html
-                content_html = content_html.replace('src="./images/', 'src="images/')
+                # Fix image paths - ensure they work with Flask routes
+                content_html = content_html.replace('src="./images/', 'src="/blog/images/')
                 
                 # Generate slug if not provided
                 slug = frontmatter.get('slug') or re.sub(r'[^a-zA-Z0-9\-_]', '-', frontmatter.get('title', md_file.stem).lower()).strip('-')

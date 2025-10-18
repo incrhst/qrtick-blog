@@ -58,7 +58,6 @@ Every successful event organizer in Jamaica asks these same questions:
 
 ### **The Ticket Type Breakdown That Changes Everything**
 
-![Ticket type performance analysis showing VIP vs General Admission revenue and conversion rates](./images/maximize-event-revenue-june-2025/ticket-breakdown.jpg)
 *See exactly which ticket types drive your profits - and which ones don't*
 
 ### **What You'll Discover About Your Events**
@@ -91,7 +90,6 @@ Every successful event organizer in Jamaica asks these same questions:
 
 ### **Real-Time Sales Notifications That Actually Help**
 
-![Mobile notification showing "New ticket sale: $45 VIP ticket for Saturday show - 3 seats remaining"](./images/maximize-event-revenue-june-2025/real-time-notifications.jpg)
 *Know instantly when tickets sell - and what it means for your event*
 
 ### **Why Real-Time Matters for Your Success**
@@ -124,7 +122,6 @@ Every successful event organizer in Jamaica asks these same questions:
 
 ### **Payment Method Intelligence**
 
-![Payment method analysis showing Stripe vs PayPal net revenue after fees](./images/maximize-event-revenue-june-2025/payment-methods.jpg)
 *See exactly how much each payment method costs you - and which ones your customers prefer*
 
 ### **What This Reveals About Your Business**
@@ -152,7 +149,6 @@ Every successful event organizer in Jamaica asks these same questions:
 
 ### **See What Works Across Your Entire Season**
 
-![Event comparison showing revenue per performance across a theater season](./images/maximize-event-revenue-june-2025/event-comparison.jpg)
 *Compare every event in your series to identify patterns and opportunities*
 
 ### **Insights That Transform Your Programming**
