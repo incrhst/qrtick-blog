@@ -33,8 +33,8 @@ env.bak/
 venv.bak/
 
 # Generated blog files (don't commit)
-blog_html/
-*.html
+# blog_html/ - Commented out to allow deployment
+# *.html - Commented out to allow deployment
 
 # Logo file exception - keep this tracked
 !qrtick-logo-alt.svg

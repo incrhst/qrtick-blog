@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Sell Tickets in Jamaica: A Complete Guide with QRTick - QRTick Blog</title>
+    <meta name="description" content="Selling tickets in Jamaica has never been easier. Whether you're organizing a cultural event, business conference, or community gathering, QRTick provides the tools and support you need to sell tickets successfully across the island.">
+    <link rel="icon" type="image/png" href="https://brand.qrtick.com/png-logos/qrtickicon.png">
+    <link rel="shortcut icon" href="https://brand.qrtick.com/png-logos/qrtickicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FFFFFF;
+            color: #2D2D2D;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .header {
+            background: #FFFFFF;
+            border-bottom: 1px solid #E5E5E5;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+        }
+        
+        .logo {
+            height: 30px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #666666;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: #2D2D2D;
+        }
+        
+        .nav-link.primary {
+            background: #2D2D2D;
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        
+        .nav-link.primary:hover {
+            background: #1A1A1A;
+            color: #FFFFFF;
+        }
+        
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .post-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        
+        .post-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2D2D2D;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        
+        .post-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            color: #666666;
+            font-size: 0.9rem;
+            align-items: center;
+        }
+        
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .blog-content h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #2D2D2D;
+            margin: 2.5rem 0 1rem 0;
+            letter-spacing: -0.02em;
+        }
+        
+        .blog-content h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin: 2rem 0 1rem 0;
+            letter-spacing: -0.01em;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            color: #2D2D2D;
+        }
+        
+        .blog-content strong {
+            font-weight: 600;
+            color: #1A1A1A;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+            color: #2D2D2D;
+        }
+        
+        .blog-content blockquote {
+            border-left: 4px solid #FDC230;
+            margin: 2rem 0;
+            padding: 1.5rem 0 1.5rem 2rem;
+            background: #FFF9EA;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #2D2D2D;
+        }
+        
+        .blog-content code {
+            background: #F5F5F5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, Menlo, Consolas, monospace;
+            font-size: 0.9em;
+        }
+        
+        .blog-content pre {
+            background: #F5F5F5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem 0;
+            display: block;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666666;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            padding: 0.75rem 0;
+            transition: color 0.2s;
+        }
+        
+        .back-to-blog:hover {
+            color: #2D2D2D;
+        }
+        
+        .footer {
+            background: #FFFFFF;
+            padding: 3rem 0 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid #E5E5E5;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+        
+        .footer-logo {
+            height: 32px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-text {
+            color: #666666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .footer-link {
+            color: #666666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-link:hover {
+            color: #2D2D2D;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .main-container {
+                padding: 2rem 1rem;
+            }
+            
+            .post-title {
+                font-size: 2rem;
+            }
+            
+            .post-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .blog-content {
+                font-size: 1rem;
+            }
+            
+            .blog-content h1 {
+                font-size: 1.75rem;
+            }
+            
+            .blog-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="nav-left">
+                <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick" class="logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <nav class="nav-links">
+                    <a href="/blog" class="nav-link">Blog</a>
+                    <a href="https://docs.qrtick.com" class="nav-link" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a href="https://tally.so/r/nW4Nak" class="nav-link primary" target="_blank" rel="noopener noreferrer">Get Started with QRTick</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    
+        <main class="main-container">
+            <a href="/blog" class="back-to-blog">← Back to Blog</a>
+            
+            <article>
+                <header class="post-header">
+                    <h1 class="post-title">How to Sell Tickets in Jamaica: A Complete Guide with QRTick</h1>
+                    <div class="post-meta">
+                        <span>📅 October 18, 2024</span>
+                        <span>👤 QRTick Team</span>
+                        <span>⏱️ 6 min read</span>
+                    </div>
+                </header>
+                
+                <div class="blog-content">
+                    <!-- QRTick Overview Section -->
+                    <div class="qrtick-overview" style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #FDC230;">
+                        <h3 style="margin-top: 0; color: #2D2D2D;">About QRTick</h3>
+                        <p style="margin-bottom: 0; color: #666666; line-height: 1.6;">
+                            Stop losing sleep over ticket sales and check-in chaos. QRTick handles the technical stuff so you can focus on what matters most - creating amazing experiences for your attendees.
+                        </p>
+                    </div>
+                    
+                    <h1 id="how-to-sell-tickets-in-jamaica-a-complete-guide-with-qrtick">How to Sell Tickets in Jamaica: A Complete Guide with QRTick</h1>
+<p>Selling tickets in Jamaica has never been easier. Whether you're organizing a cultural event, business conference, or community gathering, QRTick provides the tools and support you need to sell tickets successfully across the island.</p>
+<h2 id="why-choose-qrtick-for-your-jamaican-event">Why Choose QRTick for Your Jamaican Event?</h2>
+<p>QRTick is Jamaica's leading online ticket sales platform, trusted by event organizers from Kingston to Montego Bay. Here's why thousands of Jamaican event organizers choose QRTick:</p>
+<h3 id="built-for-jamaica">🇯🇲 Built for Jamaica</h3>
+<ul>
+<li><strong>Local Payment Processing</strong>: Accept JMD payments through EzeePay and PayPal</li>
+<li><strong>Jamaican Time Zone</strong>: All times automatically set to Jamaica Standard Time</li>
+<li><strong>Local Support</strong>: Customer service that understands Jamaican events</li>
+<li><strong>Mobile-First</strong>: Optimized for the high mobile usage in Jamaica</li>
+</ul>
+<h3 id="competitive-pricing">💰 Competitive Pricing</h3>
+<ul>
+<li><strong>Low Fees</strong>: Starting from just 2.9% + $135 JMD per transaction</li>
+<li><strong>Fee Absorption</strong>: Option to absorb fees for your customers</li>
+<li><strong>No Hidden Costs</strong>: Transparent pricing with no surprise charges</li>
+<li><strong>Volume Discounts</strong>: Better rates for high-volume events</li>
+</ul>
+<h3 id="powerful-features">🎯 Powerful Features</h3>
+<ul>
+<li><strong>QR Code Ticketing</strong>: Contactless entry with QR codes</li>
+<li><strong>Real-Time Analytics</strong>: Track sales and revenue in real-time</li>
+<li><strong>Capacity Management</strong>: Control ticket availability and prevent overselling</li>
+<li><strong>Email Marketing</strong>: Built-in tools to promote your events</li>
+<li><strong>Multi-Event Series</strong>: Manage multiple events under one series</li>
+</ul>
+<h2 id="getting-started-setting-up-your-event">Getting Started: Setting Up Your Event</h2>
+<h3 id="1-create-your-account">1. Create Your Account</h3>
+<p>Visit <a href="https://tickets.qrtick.com">tickets.qrtick.com</a> and sign up for your free account. The process takes less than 5 minutes.</p>
+<h3 id="2-set-up-your-organization">2. Set Up Your Organization</h3>
+<ul>
+<li>Add your organization details</li>
+<li>Upload your logo</li>
+<li>Set your contact information</li>
+<li>Configure your payment preferences</li>
+</ul>
+<h3 id="3-create-your-first-event">3. Create Your First Event</h3>
+<ul>
+<li><strong>Event Details</strong>: Name, description, date, time, and location</li>
+<li><strong>Ticket Types</strong>: Create different ticket categories (VIP, General, Early Bird)</li>
+<li><strong>Pricing</strong>: Set prices in JMD</li>
+<li><strong>Capacity</strong>: Define how many tickets are available</li>
+</ul>
+<h3 id="4-customize-your-event-page">4. Customize Your Event Page</h3>
+<ul>
+<li>Upload event images</li>
+<li>Add detailed descriptions</li>
+<li>Set up registration fields if needed</li>
+<li>Configure email notifications</li>
+</ul>
+<h2 id="pricing-your-tickets-for-the-jamaican-market">Pricing Your Tickets for the Jamaican Market</h2>
+<h3 id="understanding-your-costs">Understanding Your Costs</h3>
+<p>When pricing tickets in Jamaica, consider:</p>
+<ul>
+<li><strong>Venue Costs</strong>: Rental fees, security, cleaning</li>
+<li><strong>Production Costs</strong>: Sound, lighting, equipment</li>
+<li><strong>Marketing Costs</strong>: Advertising, social media promotion</li>
+<li><strong>QRTick Fees</strong>: 2.9% + $135 JMD per ticket</li>
+<li><strong>Profit Margin</strong>: Your desired return on investment</li>
+</ul>
+<h3 id="pricing-strategies-that-work-in-jamaica">Pricing Strategies That Work in Jamaica</h3>
+<h4 id="1-early-bird-pricing">1. Early Bird Pricing</h4>
+<ul>
+<li>Offer 20-30% discounts for early purchases</li>
+<li>Creates urgency and early cash flow</li>
+<li>Popular for concerts and festivals</li>
+</ul>
+<h4 id="2-tiered-pricing">2. Tiered Pricing</h4>
+<ul>
+<li><strong>VIP</strong>: Premium experience with extras</li>
+<li><strong>General</strong>: Standard admission</li>
+<li><strong>Student/Senior</strong>: Discounted rates for specific groups</li>
+</ul>
+<h4 id="3-group-discounts">3. Group Discounts</h4>
+<ul>
+<li>Offer 10-15% off for groups of 5+</li>
+<li>Encourages group attendance</li>
+<li>Popular for corporate events</li>
+</ul>
+<h3 id="example-pricing-structure">Example Pricing Structure</h3>
+<p>For a cultural event in Kingston:</p>
+<ul>
+<li><strong>Early Bird General</strong>: $2,500 JMD</li>
+<li><strong>General Admission</strong>: $3,500 JMD</li>
+<li><strong>VIP (includes refreshments)</strong>: $5,000 JMD</li>
+<li><strong>Student Rate</strong>: $2,000 JMD</li>
+</ul>
+<h2 id="marketing-your-event-in-jamaica">Marketing Your Event in Jamaica</h2>
+<h3 id="social-media-strategy">Social Media Strategy</h3>
+<ul>
+<li><strong>Facebook</strong>: Create event pages and run targeted ads</li>
+<li><strong>Instagram</strong>: Use stories and posts to build excitement</li>
+<li><strong>WhatsApp</strong>: Share event details in relevant groups</li>
+<li><strong>TikTok</strong>: Create engaging content for younger audiences</li>
+</ul>
+<h3 id="traditional-marketing">Traditional Marketing</h3>
+<ul>
+<li><strong>Radio</strong>: Partner with local stations for announcements</li>
+<li><strong>Newspapers</strong>: Place ads in The Gleaner and Observer</li>
+<li><strong>Flyers</strong>: Distribute in high-traffic areas</li>
+<li><strong>Word of Mouth</strong>: Leverage your network and community</li>
+</ul>
+<h3 id="qrtick-marketing-tools">QRTick Marketing Tools</h3>
+<ul>
+<li><strong>Email Campaigns</strong>: Send updates to your mailing list</li>
+<li><strong>Social Sharing</strong>: Easy sharing buttons on your event page</li>
+<li><strong>QR Codes</strong>: Print QR codes for easy ticket access</li>
+<li><strong>Analytics</strong>: Track which marketing channels work best</li>
+</ul>
+<h2 id="payment-processing-in-jamaica">Payment Processing in Jamaica</h2>
+<h3 id="accepted-payment-methods">Accepted Payment Methods</h3>
+<ul>
+<li><strong>Credit/Debit Cards</strong>: Visa, Mastercard, American Express</li>
+<li><strong>Bank Transfers</strong>: Direct bank payments</li>
+<li><strong>Mobile Money</strong>: Integration with local mobile payment systems</li>
+<li><strong>PayPal</strong>: International payment option</li>
+</ul>
+<h3 id="currency-and-pricing">Currency and Pricing</h3>
+<ul>
+<li>All prices displayed in Jamaican Dollars (JMD)</li>
+<li>Automatic currency conversion for international customers</li>
+<li>Real-time exchange rate updates</li>
+<li>Transparent fee structure</li>
+</ul>
+<h2 id="managing-your-event-day">Managing Your Event Day</h2>
+<h3 id="pre-event-preparation">Pre-Event Preparation</h3>
+<ul>
+<li><strong>Test Your QR Scanner</strong>: Ensure your device can read QR codes</li>
+<li><strong>Print Guest Lists</strong>: Backup in case of technical issues</li>
+<li><strong>Train Your Staff</strong>: Make sure everyone knows the check-in process</li>
+<li><strong>Prepare for High Traffic</strong>: Have multiple check-in stations ready</li>
+</ul>
+<h3 id="check-in-process">Check-In Process</h3>
+<ol>
+<li><strong>Scan QR Code</strong>: Use the QRTick mobile app or web scanner</li>
+<li><strong>Verify Ticket</strong>: System confirms valid ticket and prevents duplicates</li>
+<li><strong>Mark as Used</strong>: Ticket is automatically marked as used</li>
+<li><strong>Welcome Guest</strong>: Provide wristbands or other entry materials</li>
+</ol>
+<h3 id="real-time-monitoring">Real-Time Monitoring</h3>
+<ul>
+<li><strong>Live Sales Dashboard</strong>: Monitor ticket sales in real-time</li>
+<li><strong>Capacity Tracking</strong>: See how many tickets remain</li>
+<li><strong>Revenue Analytics</strong>: Track your earnings as they happen</li>
+<li><strong>Attendee Management</strong>: Manage guest lists and special requests</li>
+</ul>
+<h2 id="success-stories-from-jamaican-event-organizers">Success Stories from Jamaican Event Organizers</h2>
+<h3 id="cultural-events">Cultural Events</h3>
+<p><em>"QRTick helped us sell out our annual cultural festival in just 3 weeks. The QR code check-in was so smooth, our guests were impressed!"</em> - Kingston Cultural Society</p>
+<h3 id="business-conferences">Business Conferences</h3>
+<p><em>"The analytics dashboard gave us insights we never had before. We could see exactly which sessions were most popular and adjust our program accordingly."</em> - Jamaica Business Network</p>
+<h3 id="community-events">Community Events</h3>
+<p><em>"Setting up our community fundraiser was so easy. The fee absorption feature meant our supporters didn't have to pay extra fees, and we raised 20% more than last year."</em> - Montego Bay Community Center</p>
+<h2 id="common-challenges-and-solutions">Common Challenges and Solutions</h2>
+<h3 id="challenge-low-ticket-sales">Challenge: Low Ticket Sales</h3>
+<p><strong>Solutions:</strong>
+- Lower your prices initially to build audience
+- Offer early bird discounts
+- Partner with influencers or local celebrities
+- Use social media advertising</p>
+<h3 id="challenge-technical-issues">Challenge: Technical Issues</h3>
+<p><strong>Solutions:</strong>
+- Test your setup before the event
+- Have backup plans ready
+- Use QRTick's customer support
+- Keep printed guest lists as backup</p>
+<h3 id="challenge-payment-processing">Challenge: Payment Processing</h3>
+<p><strong>Solutions:</strong>
+- Offer multiple payment options
+- Consider fee absorption for customer convenience
+- Use QRTick's integrated payment system
+- Provide clear pricing information</p>
+<h2 id="advanced-features-for-growing-events">Advanced Features for Growing Events</h2>
+<h3 id="series-management">Series Management</h3>
+<ul>
+<li>Manage multiple events under one series</li>
+<li>Offer season passes or multi-event discounts</li>
+<li>Track attendance across events</li>
+<li>Build a loyal customer base</li>
+</ul>
+<h3 id="registration-forms">Registration Forms</h3>
+<ul>
+<li>Collect attendee information</li>
+<li>Customize fields for your needs</li>
+<li>Export data for follow-up marketing</li>
+<li>Comply with data protection requirements</li>
+</ul>
+<h3 id="analytics-and-reporting">Analytics and Reporting</h3>
+<ul>
+<li><strong>Sales Reports</strong>: Detailed breakdown of ticket sales</li>
+<li><strong>Revenue Analytics</strong>: Track your earnings over time</li>
+<li><strong>Attendee Demographics</strong>: Understand your audience</li>
+<li><strong>Marketing Performance</strong>: See which channels work best</li>
+</ul>
+<h2 id="getting-help-and-support">Getting Help and Support</h2>
+<h3 id="qrtick-support">QRTick Support</h3>
+<ul>
+<li><strong>Email Support</strong>: support@qrtick.com</li>
+<li><strong>Live Chat</strong>: Available during business hours</li>
+<li><strong>Documentation</strong>: Comprehensive guides and tutorials</li>
+<li><strong>Video Tutorials</strong>: Step-by-step setup guides</li>
+</ul>
+<h3 id="community-resources">Community Resources</h3>
+<ul>
+<li><strong>Facebook Group</strong>: Connect with other Jamaican event organizers</li>
+<li><strong>Blog</strong>: Regular tips and updates on event management</li>
+<li><strong>Webinars</strong>: Monthly training sessions</li>
+<li><strong>Case Studies</strong>: Learn from successful events</li>
+</ul>
+<h2 id="ready-to-start-selling-tickets">Ready to Start Selling Tickets?</h2>
+<h3 id="next-steps">Next Steps</h3>
+<ol>
+<li><strong>Sign Up</strong>: Create your free QRTick account</li>
+<li><strong>Plan Your Event</strong>: Define your event details and pricing</li>
+<li><strong>Set Up Your Page</strong>: Customize your event page</li>
+<li><strong>Start Marketing</strong>: Use QRTick's tools to promote your event</li>
+<li><strong>Manage Sales</strong>: Monitor and manage your ticket sales</li>
+<li><strong>Execute Your Event</strong>: Use QR codes for smooth check-in</li>
+</ol>
+<h3 id="special-offer-for-new-users">Special Offer for New Users</h3>
+<p>Get started with QRTick today and receive:
+- <strong>Free Setup</strong>: No setup fees for your first event
+- <strong>Priority Support</strong>: Dedicated support during your first event
+- <strong>Marketing Consultation</strong>: Free consultation on pricing and promotion
+- <strong>Success Guarantee</strong>: If you're not satisfied, we'll refund your fees</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Selling tickets in Jamaica doesn't have to be complicated. With QRTick, you have access to professional-grade ticketing tools that are designed specifically for the Jamaican market. From cultural events in Kingston to business conferences in Montego Bay, QRTick helps you sell more tickets, manage your events better, and provide an excellent experience for your attendees.</p>
+<p>Start your journey to successful ticket sales today. Visit <a href="https://tickets.qrtick.com">tickets.qrtick.com</a> and create your free account. Your next sold-out event is just a few clicks away.</p>
+<hr />
+<p><em>Ready to transform your event management? <a href="https://tickets.qrtick.com">Get started with QRTick today</a> and join thousands of successful Jamaican event organizers who trust QRTick for their ticketing needs.</em></p>
+                    
+                    <!-- CTA Section -->
+                    <div class="blog-cta" style="background: linear-gradient(135deg, #2D2D2D 0%, #1A1A1A 100%); padding: 2rem; border-radius: 12px; margin-top: 3rem; text-align: center; color: white;">
+                        <h3 style="margin-top: 0; color: white; font-size: 1.5rem;">Ready to get started?</h3>
+                        <p style="margin-bottom: 1.5rem; color: #E0E0E0; font-size: 1.1rem;">
+                            Join event organisers across Jamaica who trust QRTick for seamless event management.
+                        </p>
+                        <a href="https://tally.so/r/nW4Nak" target="_blank" rel="noopener noreferrer" 
+                           style="display: inline-block; background: #FDC230; color: #2D2D2D; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease;">
+                            Create Your Event
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </main>
+        
+    
+    
+        <footer class="footer" style="background: #FFFFFF; color: #2D2D2D; padding: 3rem 0 2rem; margin-top: 4rem; border-top: 1px solid #E5E5E5; text-align: center;">
+            <div class="footer-content" style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
+                <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick" style="height: 32px; margin-bottom: 1rem;">
+                <p style="color: #666666; font-size: 0.9rem; margin-bottom: 1rem;">
+                    Leave the ticketing logistics to us and deliver a frictionless event experience
+                </p>
+                <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+        <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer" style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">QRTick.com</a><a href="/blog"  style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">Blog</a><a href="https://docs.qrtick.com" target="_blank" rel="noopener noreferrer" style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">Documentation</a>
+                </div>
+                <p style="color: #666666; font-size: 0.9rem;">
+                    © QRTick Jamaica. All rights reserved.<br>QRTick is a service of <a href="https://incrementic.com" target="_blank" rel="noopener noreferrer" style="color: #666666; text-decoration: none; transition: color 0.2s;">Incrementic</a>
+                </p>
+            </div>
+        </footer>
+        
+</body>
+</html>

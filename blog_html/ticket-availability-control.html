@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Timing: Take Control of When Your Tickets Go on Sale - QRTick Blog</title>
+    <meta name="description" content="New precise ticket timing controls let you create excitement, manage demand, and maximize revenue by controlling exactly when each ticket type becomes available for purchase.">
+    <link rel="icon" type="image/png" href="https://brand.qrtick.com/png-logos/qrtickicon.png">
+    <link rel="shortcut icon" href="https://brand.qrtick.com/png-logos/qrtickicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FFFFFF;
+            color: #2D2D2D;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .header {
+            background: #FFFFFF;
+            border-bottom: 1px solid #E5E5E5;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+        }
+        
+        .logo {
+            height: 30px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #666666;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: #2D2D2D;
+        }
+        
+        .nav-link.primary {
+            background: #2D2D2D;
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        
+        .nav-link.primary:hover {
+            background: #1A1A1A;
+            color: #FFFFFF;
+        }
+        
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .post-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        
+        .post-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2D2D2D;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        
+        .post-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            color: #666666;
+            font-size: 0.9rem;
+            align-items: center;
+        }
+        
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .blog-content h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #2D2D2D;
+            margin: 2.5rem 0 1rem 0;
+            letter-spacing: -0.02em;
+        }
+        
+        .blog-content h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin: 2rem 0 1rem 0;
+            letter-spacing: -0.01em;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            color: #2D2D2D;
+        }
+        
+        .blog-content strong {
+            font-weight: 600;
+            color: #1A1A1A;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+            color: #2D2D2D;
+        }
+        
+        .blog-content blockquote {
+            border-left: 4px solid #FDC230;
+            margin: 2rem 0;
+            padding: 1.5rem 0 1.5rem 2rem;
+            background: #FFF9EA;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #2D2D2D;
+        }
+        
+        .blog-content code {
+            background: #F5F5F5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, Menlo, Consolas, monospace;
+            font-size: 0.9em;
+        }
+        
+        .blog-content pre {
+            background: #F5F5F5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem 0;
+            display: block;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666666;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            padding: 0.75rem 0;
+            transition: color 0.2s;
+        }
+        
+        .back-to-blog:hover {
+            color: #2D2D2D;
+        }
+        
+        .footer {
+            background: #FFFFFF;
+            padding: 3rem 0 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid #E5E5E5;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+        
+        .footer-logo {
+            height: 32px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-text {
+            color: #666666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .footer-link {
+            color: #666666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-link:hover {
+            color: #2D2D2D;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .main-container {
+                padding: 2rem 1rem;
+            }
+            
+            .post-title {
+                font-size: 2rem;
+            }
+            
+            .post-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .blog-content {
+                font-size: 1rem;
+            }
+            
+            .blog-content h1 {
+                font-size: 1.75rem;
+            }
+            
+            .blog-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="nav-left">
+                <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick" class="logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <nav class="nav-links">
+                    <a href="/blog" class="nav-link">Blog</a>
+                    <a href="https://docs.qrtick.com" class="nav-link" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a href="https://tally.so/r/nW4Nak" class="nav-link primary" target="_blank" rel="noopener noreferrer">Get Started with QRTick</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    
+        <main class="main-container">
+            <a href="/blog" class="back-to-blog">← Back to Blog</a>
+            
+            <article>
+                <header class="post-header">
+                    <h1 class="post-title">Perfect Timing: Take Control of When Your Tickets Go on Sale</h1>
+                    <div class="post-meta">
+                        <span>📅 June 4, 2024</span>
+                        <span>👤 QRTick Team</span>
+                        <span>⏱️ 7 min read</span>
+                    </div>
+                </header>
+                
+                <div class="blog-content">
+                    <!-- QRTick Overview Section -->
+                    <div class="qrtick-overview" style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #FDC230;">
+                        <h3 style="margin-top: 0; color: #2D2D2D;">About QRTick</h3>
+                        <p style="margin-bottom: 0; color: #666666; line-height: 1.6;">
+                            Stop losing sleep over ticket sales and check-in chaos. QRTick handles the technical stuff so you can focus on what matters most - creating amazing experiences for your attendees.
+                        </p>
+                    </div>
+                    
+                    <h1 id="perfect-timing-take-control-of-when-your-tickets-go-on-sale">Perfect Timing: Take Control of When Your Tickets Go on Sale</h1>
+<h2 id="new-ticket-availability-controls">New Ticket Availability Controls</h2>
+<p><strong>Create excitement, manage demand, and maximize revenue with precise timing control</strong></p>
+<hr />
+<h2 id="what-this-means-for-your-events">🎯 <strong>What This Means for Your Events</strong></h2>
+<h3 id="complete-control-over-ticket-sales-timing"><strong>Complete Control Over Ticket Sales Timing</strong></h3>
+<p><strong>Stop losing money to poor timing.</strong> Our new availability system gives you precise control over when each type of ticket becomes available for purchase - not just your entire event, but individual ticket types.</p>
+<p><strong>Perfect for your next event:</strong></p>
+<ul>
+<li><strong>Early Bird vs. Regular pricing</strong> - Release cheaper tickets first, then automatically switch to regular price</li>
+<li><strong>VIP ticket drops</strong> - Create excitement by releasing premium tickets at a specific time</li>
+<li><strong>Member pre-sales</strong> - Give your supporters exclusive access before the public</li>
+<li><strong>Limited edition releases</strong> - Build anticipation with timed ticket drops</li>
+<li><strong>Multi-day festivals</strong> - Control when tickets for each day become available</li>
+</ul>
+<hr />
+<h2 id="how-it-actually-works">⏰ <strong>How It Actually Works</strong></h2>
+<h3 id="set-it-and-forget-it"><strong>Set It and Forget It</strong></h3>
+<p><strong>No more manual switching.</strong> Once you set up your timing rules, everything happens automatically:</p>
+<p><strong>Option 1: Set Exact Times</strong></p>
+<ul>
+<li>Early Bird tickets: Available July 15th at 10:00 AM</li>
+<li>Regular tickets: Available August 1st at 10:00 AM  </li>
+<li>VIP tickets: Available August 15th at 12:00 PM</li>
+</ul>
+<p><strong>Option 2: Set Days Before Your Event</strong></p>
+<ul>
+<li>Member tickets: Available 30 days before the event</li>
+<li>Public tickets: Available 21 days before the event</li>
+<li>Last-minute tickets: Stop selling 2 days before the event</li>
+</ul>
+<p><strong>Option 3: Manual Control When You Need It</strong></p>
+<ul>
+<li>Override everything with a simple toggle</li>
+<li>Instantly enable or disable any ticket type</li>
+<li>Perfect for last-minute changes or special circumstances</li>
+</ul>
+<h3 id="automatic-sales-closing-never-miss-a-deadline"><strong>Automatic Sales Closing - Never Miss a Deadline</strong></h3>
+<p><strong>Here's the game-changer:</strong> You can schedule when ticket sales close and they'll close automatically. No more staying up late to manually stop sales or worrying about tickets selling when they shouldn't.</p>
+<p><strong>Set it once, forget about it:</strong></p>
+<ul>
+<li>Early bird pricing automatically ends at midnight on July 15th</li>
+<li>VIP sales automatically stop 1 week before your event  </li>
+<li>General admission closes 2 hours before event start</li>
+<li><strong>You sleep peacefully</strong> knowing everything happens on schedule</li>
+</ul>
+<p><strong>Perfect for:</strong></p>
+<ul>
+<li><strong>Pricing deadlines</strong> - Early bird rates end exactly when planned</li>
+<li><strong>Logistics cutoffs</strong> - Stop sales when you need prep time</li>
+<li><strong>Capacity management</strong> - Close when you hit your target numbers</li>
+<li><strong>Peace of mind</strong> - Never accidentally oversell or miss a deadline</li>
+</ul>
+<hr />
+<h2 id="real-revenue-benefits">💰 <strong>Real Revenue Benefits</strong></h2>
+<h3 id="early-bird-strategy-that-actually-works"><strong>Early Bird Strategy That Actually Works</strong></h3>
+<p><strong>Encourage early purchases</strong> without losing late buyers:</p>
+<p><strong>Example: Theater Season Launch</strong></p>
+<ul>
+<li><strong>Month 1:</strong> Release "Super Early Bird" season passes at $200</li>
+<li><strong>Month 2:</strong> Regular season passes automatically become available at $250  </li>
+<li><strong>Month 3:</strong> Individual show tickets open at $35 each</li>
+<li><strong>Week of show:</strong> Premium rush tickets at $45</li>
+</ul>
+<p><strong>What happens:</strong></p>
+<ul>
+<li><strong>Loyal fans</strong> get rewarded with the best price</li>
+<li><strong>Procrastinators</strong> still buy at higher prices  </li>
+<li><strong>Walk-ins</strong> pay premium pricing</li>
+<li><strong>You capture maximum value</strong> from each customer segment</li>
+</ul>
+<h3 id="create-genuine-scarcity"><strong>Create Genuine Scarcity</strong></h3>
+<p><strong>Build real anticipation</strong> for your premium experiences:</p>
+<p><strong>Example: Exclusive Dinner Show</strong></p>
+<ul>
+<li><strong>VIP table tickets:</strong> Available Monday at noon (50 seats)</li>
+<li><strong>Premium seats:</strong> Available Wednesday at noon (100 seats)</li>
+<li><strong>General admission:</strong> Available Friday at noon (200 seats)</li>
+</ul>
+<p><strong>Result:</strong> Each release creates a "mini event launch" with social media buzz and urgency.</p>
+<hr />
+<h2 id="perfect-for-jamaicas-event-scene">🎭 <strong>Perfect for Jamaica's Event Scene</strong></h2>
+<h3 id="fundraising-galas"><strong>Fundraising Galas</strong></h3>
+<p><strong>Maximize donor engagement:</strong></p>
+<ul>
+<li><strong>Major donor tables:</strong> Available first with personal outreach</li>
+<li><strong>Corporate sponsorship packages:</strong> Release second </li>
+<li><strong>Individual tickets:</strong> Open to public last</li>
+<li><strong>Premium bar packages:</strong> Available day of event for last-minute upgrades</li>
+</ul>
+<h3 id="concert-series"><strong>Concert Series</strong></h3>
+<p><strong>Build your audience gradually:</strong></p>
+<ul>
+<li><strong>Fan club pre-sale:</strong> 7 days early access</li>
+<li><strong>Email subscribers:</strong> 3 days early access</li>
+<li><strong>General public:</strong> Standard release</li>
+<li><strong>VIP upgrades:</strong> Available 1 week before show for maximum impulse buying</li>
+</ul>
+<h3 id="community-theater"><strong>Community Theater</strong></h3>
+<p><strong>Reward loyalty while filling seats:</strong></p>
+<ul>
+<li><strong>Season subscribers:</strong> First access to best seats</li>
+<li><strong>Previous attendees:</strong> Early access discount  </li>
+<li><strong>New audience:</strong> Standard pricing</li>
+<li><strong>Rush tickets:</strong> Day-of-show pricing for students</li>
+</ul>
+<h3 id="corporate-events"><strong>Corporate Events</strong></h3>
+<p><strong>Control professional attendance:</strong></p>
+<ul>
+<li><strong>Executive packages:</strong> Limited early release</li>
+<li><strong>Team registrations:</strong> Bulk pricing window</li>
+<li><strong>Individual professional tickets:</strong> Standard release</li>
+<li><strong>Networking add-ons:</strong> Available closer to event date</li>
+</ul>
+<hr />
+<h2 id="easy-setup-powerful-results">🚀 <strong>Easy Setup, Powerful Results</strong></h2>
+<h3 id="three-simple-ways-to-control-timing"><strong>Three Simple Ways to Control Timing</strong></h3>
+<p><strong>1. Calendar Dates and Times</strong>
+Perfect when you know exactly when you want sales to start:</p>
+<ul>
+<li>"VIP tickets available July 1st at 2:00 PM"</li>
+<li>"Early bird ends July 15th at midnight"</li>
+</ul>
+<p><strong>2. Days Before Event</strong><br />
+Perfect for consistent timing across multiple events:</p>
+<ul>
+<li>"Member pre-sale starts 14 days before each show"</li>
+<li>"Ticket sales end 1 day before event"</li>
+</ul>
+<p><strong>3. Manual Override</strong>
+Perfect for special circumstances:</p>
+<ul>
+<li>Instantly turn any ticket type on or off</li>
+<li>Override all automatic rules when needed</li>
+<li>Handle last-minute changes or sold-out situations</li>
+</ul>
+<h3 id="what-your-customers-see"><strong>What Your Customers See</strong></h3>
+<p><strong>Before tickets are available:</strong></p>
+<ul>
+<li>Clear countdown timers showing when sales start</li>
+<li>Email notifications when tickets become available</li>
+<li>Professional messaging that builds anticipation</li>
+</ul>
+<p><strong>When tickets are available:</strong></p>
+<ul>
+<li>Seamless purchasing experience</li>
+<li>Clear information about when sales end</li>
+<li>No confusion about availability</li>
+</ul>
+<p><strong>After tickets close:</strong></p>
+<ul>
+<li>Professional "sales ended" messaging</li>
+<li>Clear next steps (waitlist, contact info, etc.)</li>
+<li>Maintains your professional image</li>
+</ul>
+<hr />
+<h2 id="track-what-works">📊 <strong>Track What Works</strong></h2>
+<h3 id="smart-analytics-for-better-planning"><strong>Smart Analytics for Better Planning</strong></h3>
+<p><strong>Learn from each release:</strong></p>
+<ul>
+<li>See which ticket types sell fastest</li>
+<li>Track revenue by time period</li>
+<li>Understand your audience's buying patterns</li>
+<li>Plan better timing for future events</li>
+</ul>
+<p><strong>Use this data for your next event:</strong></p>
+<ul>
+<li><strong>Optimize your pricing strategy</strong> based on demand patterns</li>
+<li><strong>Adjust timing</strong> based on when your audience actually buys</li>
+<li><strong>Create better marketing campaigns</strong> around high-demand periods</li>
+<li><strong>Identify your most valuable customer segments</strong></li>
+</ul>
+<hr />
+<h2 id="real-world-examples">🎯 <strong>Real-World Examples</strong></h2>
+<h3 id="success-story-music-festival"><strong>Success Story: Music Festival</strong></h3>
+<p><strong>Problem:</strong> All tickets released at once, early birds sold out in minutes, regular fans missed out</p>
+<p><strong>Solution:</strong> </p>
+<ul>
+<li>Super Early Bird: 500 tickets, 60 days before</li>
+<li>Early Bird: 1,000 tickets, 30 days before  </li>
+<li>Regular: 2,000 tickets, 14 days before</li>
+<li>Last Chance: 500 tickets, 3 days before</li>
+</ul>
+<p><strong>Result:</strong> Extended selling period, happier fans, 25% higher average ticket price</p>
+<h3 id="success-story-charity-gala"><strong>Success Story: Charity Gala</strong></h3>
+<p><strong>Problem:</strong> Major donors felt treated the same as general public</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Platinum tables: Personal invitation, 45 days early</li>
+<li>Gold sponsors: Exclusive pre-sale, 30 days early</li>
+<li>Corporate tables: Business pre-sale, 14 days early  </li>
+<li>Individual tickets: Public sale, 7 days early</li>
+</ul>
+<p><strong>Result:</strong> Donors felt valued, corporate engagement increased, event sold out</p>
+<hr />
+<h2 id="start-using-this-today">✅ <strong>Start Using This Today</strong></h2>
+<h3 id="quick-setup-for-your-next-event"><strong>Quick Setup for Your Next Event</strong></h3>
+<p><strong>Step 1: Plan Your Strategy</strong></p>
+<ul>
+<li>Identify your different audience segments</li>
+<li>Decide on pricing for each phase</li>
+<li>Choose your timing approach</li>
+</ul>
+<p><strong>Step 2: Configure Your Tickets</strong></p>
+<ul>
+<li>Set up each ticket type with its own timing</li>
+<li>Test the customer experience</li>
+<li>Schedule any email announcements</li>
+</ul>
+<p><strong>Step 3: Launch and Monitor</strong></p>
+<ul>
+<li>Watch the analytics to see what's working</li>
+<li>Adjust future events based on data</li>
+<li>Build on successful patterns</li>
+</ul>
+<h3 id="best-practices"><strong>Best Practices</strong></h3>
+<p><strong>Do:</strong></p>
+<ul>
+<li>Give your best customers early access</li>
+<li>Create clear value differences between timing phases</li>
+<li>Use countdown timers to build anticipation</li>
+<li>Monitor and adjust based on results</li>
+</ul>
+<p><strong>Don't:</strong></p>
+<ul>
+<li>Make timing too complicated for customers to understand</li>
+<li>Create artificial scarcity without real value</li>
+<li>Forget to communicate timing clearly in your marketing</li>
+<li>Ignore the data for future planning</li>
+</ul>
+<hr />
+<h2 id="perfect-for-your-event-type">🎭 <strong>Perfect for Your Event Type</strong></h2>
+<p><strong>Theater &amp; Arts:</strong></p>
+<ul>
+<li>Season subscriber early access</li>
+<li>Single show public release</li>
+<li>Premium seating upgrades</li>
+<li>Rush tickets for students</li>
+</ul>
+<p><strong>Conferences &amp; Business:</strong></p>
+<ul>
+<li>Speaker/sponsor early registration</li>
+<li>Member pre-sale pricing</li>
+<li>Corporate team packages</li>
+<li>Individual professional rates</li>
+</ul>
+<p><strong>Community Events:</strong></p>
+<ul>
+<li>Volunteer and supporter early access</li>
+<li>Community member pricing</li>
+<li>General public release</li>
+<li>Day-of-event premium pricing</li>
+</ul>
+<p><strong>Fundraising:</strong></p>
+<ul>
+<li>Major donor exclusive access</li>
+<li>Sponsor package pre-sale</li>
+<li>Board member and volunteer pricing</li>
+<li>General supporter tickets</li>
+</ul>
+<hr />
+<h2 id="bottom-line-benefits">🚀 <strong>Bottom Line Benefits</strong></h2>
+<p><strong>This feature helps your next event:</strong></p>
+<ul>
+<li>✅ <strong>Increase total revenue</strong> through strategic pricing phases</li>
+<li>✅ <strong>Reward loyal supporters</strong> with early access and better prices</li>
+<li>✅ <strong>Create genuine excitement</strong> with timed releases</li>
+<li>✅ <strong>Reduce manual work</strong> with automatic timing controls</li>
+<li>✅ <strong>Build better customer relationships</strong> through thoughtful timing</li>
+<li>✅ <strong>Make data-driven decisions</strong> for future events</li>
+</ul>
+<p><strong>Ready to take control of your ticket timing?</strong> This feature is available now for all QRTick events - no setup required, just better control over when your tickets become available.</p>
+                    
+                    <!-- CTA Section -->
+                    <div class="blog-cta" style="background: linear-gradient(135deg, #2D2D2D 0%, #1A1A1A 100%); padding: 2rem; border-radius: 12px; margin-top: 3rem; text-align: center; color: white;">
+                        <h3 style="margin-top: 0; color: white; font-size: 1.5rem;">Ready to get started?</h3>
+                        <p style="margin-bottom: 1.5rem; color: #E0E0E0; font-size: 1.1rem;">
+                            Join event organisers across Jamaica who trust QRTick for seamless event management.
+                        </p>
+                        <a href="https://tally.so/r/nW4Nak" target="_blank" rel="noopener noreferrer" 
+                           style="display: inline-block; background: #FDC230; color: #2D2D2D; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease;">
+                            Create Your Event
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </main>
+        
+    
+    
+        <footer class="footer" style="background: #FFFFFF; color: #2D2D2D; padding: 3rem 0 2rem; margin-top: 4rem; border-top: 1px solid #E5E5E5; text-align: center;">
+            <div class="footer-content" style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
+                <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick" style="height: 32px; margin-bottom: 1rem;">
+                <p style="color: #666666; font-size: 0.9rem; margin-bottom: 1rem;">
+                    Leave the ticketing logistics to us and deliver a frictionless event experience
+                </p>
+                <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+        <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer" style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">QRTick.com</a><a href="/blog"  style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">Blog</a><a href="https://docs.qrtick.com" target="_blank" rel="noopener noreferrer" style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">Documentation</a>
+                </div>
+                <p style="color: #666666; font-size: 0.9rem;">
+                    © QRTick Jamaica. All rights reserved.<br>QRTick is a service of <a href="https://incrementic.com" target="_blank" rel="noopener noreferrer" style="color: #666666; text-decoration: none; transition: color 0.2s;">Incrementic</a>
+                </p>
+            </div>
+        </footer>
+        
+</body>
+</html>

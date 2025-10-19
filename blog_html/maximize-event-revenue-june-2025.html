@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Guessing About Your Event Revenue - Now You Know Exactly What's Working - QRTick Blog</title>
+    <meta name="description" content="New revenue analytics and real-time notifications help Jamaican event organizers make smarter decisions and maximize profits from every event.">
+    <link rel="icon" type="image/png" href="https://brand.qrtick.com/png-logos/qrtickicon.png">
+    <link rel="shortcut icon" href="https://brand.qrtick.com/png-logos/qrtickicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FFFFFF;
+            color: #2D2D2D;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .header {
+            background: #FFFFFF;
+            border-bottom: 1px solid #E5E5E5;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+        }
+        
+        .logo {
+            height: 30px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #666666;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: #2D2D2D;
+        }
+        
+        .nav-link.primary {
+            background: #2D2D2D;
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        
+        .nav-link.primary:hover {
+            background: #1A1A1A;
+            color: #FFFFFF;
+        }
+        
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .post-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        
+        .post-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2D2D2D;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        
+        .post-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            color: #666666;
+            font-size: 0.9rem;
+            align-items: center;
+        }
+        
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .blog-content h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #2D2D2D;
+            margin: 2.5rem 0 1rem 0;
+            letter-spacing: -0.02em;
+        }
+        
+        .blog-content h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin: 2rem 0 1rem 0;
+            letter-spacing: -0.01em;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            color: #2D2D2D;
+        }
+        
+        .blog-content strong {
+            font-weight: 600;
+            color: #1A1A1A;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+            color: #2D2D2D;
+        }
+        
+        .blog-content blockquote {
+            border-left: 4px solid #FDC230;
+            margin: 2rem 0;
+            padding: 1.5rem 0 1.5rem 2rem;
+            background: #FFF9EA;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #2D2D2D;
+        }
+        
+        .blog-content code {
+            background: #F5F5F5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, Menlo, Consolas, monospace;
+            font-size: 0.9em;
+        }
+        
+        .blog-content pre {
+            background: #F5F5F5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem 0;
+            display: block;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666666;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            padding: 0.75rem 0;
+            transition: color 0.2s;
+        }
+        
+        .back-to-blog:hover {
+            color: #2D2D2D;
+        }
+        
+        .footer {
+            background: #FFFFFF;
+            padding: 3rem 0 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid #E5E5E5;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+        
+        .footer-logo {
+            height: 32px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-text {
+            color: #666666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .footer-link {
+            color: #666666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-link:hover {
+            color: #2D2D2D;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .main-container {
+                padding: 2rem 1rem;
+            }
+            
+            .post-title {
+                font-size: 2rem;
+            }
+            
+            .post-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .blog-content {
+                font-size: 1rem;
+            }
+            
+            .blog-content h1 {
+                font-size: 1.75rem;
+            }
+            
+            .blog-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="nav-left">
+                <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick" class="logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <nav class="nav-links">
+                    <a href="/blog" class="nav-link">Blog</a>
+                    <a href="https://docs.qrtick.com" class="nav-link" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a href="https://tally.so/r/nW4Nak" class="nav-link primary" target="_blank" rel="noopener noreferrer">Get Started with QRTick</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    
+        <main class="main-container">
+            <a href="/blog" class="back-to-blog">← Back to Blog</a>
+            
+            <article>
+                <header class="post-header">
+                    <h1 class="post-title">Stop Guessing About Your Event Revenue - Now You Know Exactly What's Working</h1>
+                    <div class="post-meta">
+                        <span>📅 June 10, 2024</span>
+                        <span>👤 QRTick Team</span>
+                        <span>⏱️ 7 min read</span>
+                    </div>
+                </header>
+                
+                <div class="blog-content">
+                    <!-- QRTick Overview Section -->
+                    <div class="qrtick-overview" style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #FDC230;">
+                        <h3 style="margin-top: 0; color: #2D2D2D;">About QRTick</h3>
+                        <p style="margin-bottom: 0; color: #666666; line-height: 1.6;">
+                            Stop losing sleep over ticket sales and check-in chaos. QRTick handles the technical stuff so you can focus on what matters most - creating amazing experiences for your attendees.
+                        </p>
+                    </div>
+                    
+                    <h1 id="stop-guessing-about-your-event-revenue">Stop Guessing About Your Event Revenue</h1>
+<h2 id="now-you-know-exactly-whats-working">Now You Know Exactly What's Working</h2>
+<p><strong>Finally - clear answers to the questions that keep event organizers up at night</strong></p>
+<hr />
+<h2 id="the-questions-youve-been-asking">🤔 <strong>The Questions You've Been Asking</strong></h2>
+<p>Every successful event organizer in Jamaica asks these same questions:</p>
+<ul>
+<li><em>"Which ticket types actually make me money?"</em></li>
+<li><em>"Am I pricing my VIP tickets right?"</em></li>
+<li><em>"How much am I really keeping after payment fees?"</em></li>
+<li><em>"Should I offer more general admission or premium seats?"</em></li>
+<li><em>"When should I stop online sales and push gate sales?"</em></li>
+</ul>
+<p><strong>Until now, you've been making these critical decisions based on gut feeling.</strong></p>
+<p><strong>Not anymore.</strong></p>
+<hr />
+<h2 id="meet-your-new-revenue-command-center">📊 <strong>Meet Your New Revenue Command Center</strong></h2>
+<h3 id="see-your-real-numbers-not-gross-sales"><strong>See Your Real Numbers, Not Gross Sales</strong></h3>
+<p><img alt="Revenue dashboard showing comprehensive breakdown with JMD 124,500 net revenue, 44 tickets sold, 54 complimentary tickets, and detailed ticket type analysis" src="/blog/images/maximize-event-revenue-june-2025/revenue-dashboard.jpg" />
+<em>Your new revenue dashboard - see everything that matters at a glance: net revenue, ticket breakdown, payment methods, and comp tracking</em></p>
+<p><strong>The game-changer:</strong> We now show you <strong>exactly what money hits your bank account</strong> after all payment processing fees.</p>
+<h3 id="why-this-matters-for-your-next-event"><strong>Why This Matters for Your Next Event</strong></h3>
+<p><strong>Old way:</strong> <em>"We sold $10,000 in tickets!"</em> (But you only received $9,200)</p>
+<p><strong>New way:</strong> <em>"We netted $9,200 from ticket sales, with $800 in processing fees"</em> (Now you can plan accurately)</p>
+<h3 id="real-impact-on-your-planning"><strong>Real Impact on Your Planning</strong></h3>
+<ul>
+<li>✅ <strong>Budget accurately</strong> - Know your actual revenue, not inflated gross numbers</li>
+<li>✅ <strong>Price strategically</strong> - Understand which ticket types are actually profitable</li>
+<li>✅ <strong>Choose payment methods wisely</strong> - See which options maximize your take-home</li>
+<li>✅ <strong>Plan future events</strong> - Base decisions on real profit margins</li>
+</ul>
+<hr />
+<h2 id="discover-which-tickets-actually-make-you-money">🎯 <strong>Discover Which Tickets Actually Make You Money</strong></h2>
+<h3 id="the-ticket-type-breakdown-that-changes-everything"><strong>The Ticket Type Breakdown That Changes Everything</strong></h3>
+<p><em>See exactly which ticket types drive your profits - and which ones don't</em></p>
+<h3 id="what-youll-discover-about-your-events"><strong>What You'll Discover About Your Events</strong></h3>
+<p><strong>For Your Theater Season:</strong>
+- Are your $50 premium seats actually more profitable than $25 general admission?
+- Should you offer more VIP options or focus on volume sales?
+- Which shows attract higher-spending audiences?</p>
+<p><strong>For Your Fundraising Gala:</strong>
+- Do corporate tables generate more per-person than individual tickets?
+- Are your sponsorship packages priced optimally?
+- Which donor categories contribute most to your bottom line?</p>
+<p><strong>For Your Conference:</strong>
+- Should you focus on early bird pricing or full-price sales?
+- Are workshop add-ons profitable or just complicating things?
+- Which attendee segments justify premium pricing?</p>
+<h3 id="make-smarter-decisions-for-your-next-event"><strong>Make Smarter Decisions for Your Next Event</strong></h3>
+<p><strong>Example: Kingston Theater Collective</strong>
+- Discovered VIP tickets had 40% higher profit margins despite lower volume
+- Increased VIP seating by 20% for their next production
+- <strong>Result:</strong> 25% increase in total revenue with same attendance</p>
+<hr />
+<h2 id="never-miss-a-sale-again">🔔 <strong>Never Miss a Sale Again</strong></h2>
+<h3 id="real-time-sales-notifications-that-actually-help"><strong>Real-Time Sales Notifications That Actually Help</strong></h3>
+<p><em>Know instantly when tickets sell - and what it means for your event</em></p>
+<h3 id="why-real-time-matters-for-your-success"><strong>Why Real-Time Matters for Your Success</strong></h3>
+<p><strong>During Your Event Week:</strong>
+- See momentum building and adjust your final marketing push
+- Know when to close online sales and push gate sales
+- Watch your revenue targets in real-time</p>
+<p><strong>For Your Peace of Mind:</strong>
+- Hear that satisfying "kaching" when tickets sell
+- Get desktop notifications even when you're away from your computer
+- See updated ticket counts instantly on your dashboard</p>
+<h3 id="strategic-benefits-you-havent-considered"><strong>Strategic Benefits You Haven't Considered</strong></h3>
+<p><strong>Smart Inventory Management:</strong>
+- Close online sales for nearly-sold-out shows to maximize gate prices
+- Keep online sales open for slower shows to maintain momentum
+- Switch marketing focus to your best-performing events</p>
+<p><strong>Revenue Optimization:</strong>
+- See which days and times generate most sales
+- Adjust your promotion schedule based on real patterns
+- Make data-driven decisions about pricing and availability</p>
+<hr />
+<h2 id="understanding-your-true-profit-picture">💰 <strong>Understanding Your True Profit Picture</strong></h2>
+<h3 id="payment-method-intelligence"><strong>Payment Method Intelligence</strong></h3>
+<p><em>See exactly how much each payment method costs you - and which ones your customers prefer</em></p>
+<h3 id="what-this-reveals-about-your-business"><strong>What This Reveals About Your Business</strong></h3>
+<p><strong>Payment Method Performance:</strong>
+- Which payment options your audience actually uses
+- True cost of accepting different payment types
+- Customer preferences that affect your bottom line</p>
+<p><strong>Smart Pricing Strategies:</strong>
+- Should you offer cash-at-gate discounts to avoid processing fees?
+- Are international payment options worth the extra fees?
+- Can you steer customers toward lower-fee payment methods?</p>
+<h3 id="real-example-montego-bay-music-festival"><strong>Real Example: Montego Bay Music Festival</strong></h3>
+<p><strong>Before:</strong> Assumed all $20 tickets generated the same profit
+<strong>After:</strong> Discovered cash sales netted $19.50 while online sales netted $18.20
+<strong>Action:</strong> Offered $18 gate price for cash, $20 online
+<strong>Result:</strong> Increased gate sales by 30% and improved overall margins</p>
+<hr />
+<h2 id="per-event-analysis-that-drives-better-decisions">📈 <strong>Per-Event Analysis That Drives Better Decisions</strong></h2>
+<h3 id="see-what-works-across-your-entire-season"><strong>See What Works Across Your Entire Season</strong></h3>
+<p><em>Compare every event in your series to identify patterns and opportunities</em></p>
+<h3 id="insights-that-transform-your-programming"><strong>Insights That Transform Your Programming</strong></h3>
+<p><strong>For Theater Companies:</strong>
+- Which show titles attract bigger audiences?
+- Do Friday or Saturday shows generate more revenue?
+- Should you extend runs of successful shows?</p>
+<p><strong>For Event Series:</strong>
+- Which topics or speakers drive highest attendance?
+- Are your workshop sessions profitable enough to continue?
+- Should you change your event frequency or format?</p>
+<p><strong>For Venue Managers:</strong>
+- Which types of events are most profitable for your space?
+- How do different rental rates affect total event revenue?
+- Should you focus on fewer, larger events or more frequent smaller ones?</p>
+<h3 id="data-driven-programming-decisions"><strong>Data-Driven Programming Decisions</strong></h3>
+<p><strong>Spanish Town Community Center Discovery:</strong>
+- Saturday family events averaged 40% higher per-person revenue
+- Evening concerts had higher gross sales but lower profit margins
+- <strong>Strategy shift:</strong> More Saturday family programming, fewer evening concerts
+- <strong>Result:</strong> 35% increase in annual revenue</p>
+<hr />
+<h2 id="perfect-for-jamaicas-event-landscape">🎭 <strong>Perfect for Jamaica's Event Landscape</strong></h2>
+<h3 id="built-for-how-jamaican-organizers-actually-work"><strong>Built for How Jamaican Organizers Actually Work</strong></h3>
+<p><strong>Community Fundraisers:</strong>
+- Track which activities generate most funds
+- See impact of different pricing strategies
+- Optimize your donor appreciation events</p>
+<p><strong>Cultural Events:</strong>
+- Understand which cultural programs resonate most
+- Balance accessibility with revenue generation
+- Plan sustainable programming that serves your community</p>
+<p><strong>Corporate Events:</strong>
+- Justify pricing to clients with clear data
+- Demonstrate ROI on sponsorship packages
+- Build packages that maximize mutual benefit</p>
+<p><strong>Church and Ministry Events:</strong>
+- Balance ministry goals with financial sustainability
+- Show stewardship through transparent reporting
+- Plan events that serve your mission and your budget</p>
+<hr />
+<h2 id="start-making-smarter-decisions-today">🚀 <strong>Start Making Smarter Decisions Today</strong></h2>
+<h3 id="these-features-are-live-now"><strong>These Features Are Live Now</strong></h3>
+<p><strong>No setup required - just log in and see:</strong>
+- Your real revenue numbers (not just gross sales)
+- Which ticket types actually make you money
+- Live notifications when tickets sell
+- Complete breakdown of every event in your series</p>
+<h3 id="take-action-on-your-next-event"><strong>Take Action on Your Next Event</strong></h3>
+<ol>
+<li><strong>Check your current revenue dashboard</strong> - See which events are actually most profitable</li>
+<li><strong>Review your ticket type performance</strong> - Adjust pricing and availability based on real data</li>
+<li><strong>Turn on notifications</strong> - Never miss important sales momentum</li>
+<li><strong>Compare your events</strong> - Identify patterns that can improve future programming</li>
+</ol>
+<hr />
+<h2 id="see-it-in-action">📞 <strong>See It in Action</strong></h2>
+<h3 id="want-a-personal-walkthrough"><strong>Want a Personal Walkthrough?</strong></h3>
+<p><strong>We'll show you exactly how these insights can improve your specific events:</strong>
+- Review your past event data to identify opportunities
+- Explain how to interpret your revenue analytics
+- Help you set up notifications that matter to your goals
+- Show you how other Jamaican organizers are using these features</p>
+<hr />
+<h2 id="the-bottom-line-for-your-events">🎯 <strong>The Bottom Line for Your Events</strong></h2>
+<h3 id="before-these-updates"><strong>Before These Updates</strong></h3>
+<ul>
+<li>Guessing which events were actually profitable</li>
+<li>Surprised by processing fees eating into revenue</li>
+<li>Missing sales opportunities due to delayed information</li>
+<li>Making programming decisions without real data</li>
+</ul>
+<h3 id="after-these-updates"><strong>After These Updates</strong></h3>
+<ul>
+<li>✅ <strong>Clear profit visibility</strong> - Know exactly what you're earning</li>
+<li>✅ <strong>Smart pricing decisions</strong> - Based on real performance data</li>
+<li>✅ <strong>Instant sales awareness</strong> - Never miss momentum or opportunities</li>
+<li>✅ <strong>Strategic programming</strong> - Choose events that actually work</li>
+<li>✅ <strong>Better financial planning</strong> - Accurate revenue projections</li>
+</ul>
+<hr />
+<h2 id="success-stories-from-real-jamaican-events">💡 <strong>Success Stories from Real Jamaican Events</strong></h2>
+<h3 id="kingston-independence-festival"><strong>Kingston Independence Festival</strong></h3>
+<p><em>"Discovered our children's activities were generating 60% more profit per ticket than adult events. Shifted our programming mix and increased overall revenue by 40%."</em></p>
+<h3 id="blue-mountain-coffee-tour-series"><strong>Blue Mountain Coffee Tour Series</strong></h3>
+<p><em>"Real-time notifications helped us see Saturday tours were selling out fast. We added more Saturday dates and grew revenue by 25% without increasing marketing spend."</em></p>
+<h3 id="portmore-business-conference"><strong>Portmore Business Conference</strong></h3>
+<p><em>"The payment method analysis showed us that offering PayPal increased our international attendance by 35%. The processing fees were worth it for the additional reach."</em></p>
+<hr />
+<h2 id="your-next-event-can-be-your-most-profitable">🚀 <strong>Your Next Event Can Be Your Most Profitable</strong></h2>
+<h3 id="ready-to-stop-guessing"><strong>Ready to Stop Guessing?</strong></h3>
+<p><strong>These analytics are available in your dashboard right now.</strong> </p>
+<p>Log in and see what your events are really telling you about your audience, your pricing, and your profit potential.</p>
+<p><strong>Because successful events aren't just about great programming - they're about understanding what actually works.</strong></p>
+<hr />
+<p><em>Every event organizer deserves to know their real numbers. Now you do.</em></p>
+<p><strong>Questions about maximizing your event revenue? We're here to help you succeed.</strong></p>
+<hr />
+<p><strong>QRTick - Making your events more profitable through better insights</strong></p>
+                    
+                    <!-- CTA Section -->
+                    <div class="blog-cta" style="background: linear-gradient(135deg, #2D2D2D 0%, #1A1A1A 100%); padding: 2rem; border-radius: 12px; margin-top: 3rem; text-align: center; color: white;">
+                        <h3 style="margin-top: 0; color: white; font-size: 1.5rem;">Ready to get started?</h3>
+                        <p style="margin-bottom: 1.5rem; color: #E0E0E0; font-size: 1.1rem;">
+                            Join event organisers across Jamaica who trust QRTick for seamless event management.
+                        </p>
+                        <a href="https://tally.so/r/nW4Nak" target="_blank" rel="noopener noreferrer" 
+                           style="display: inline-block; background: #FDC230; color: #2D2D2D; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease;">
+                            Create Your Event
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </main>
+        
+    
+    
+        <footer class="footer" style="background: #FFFFFF; color: #2D2D2D; padding: 3rem 0 2rem; margin-top: 4rem; border-top: 1px solid #E5E5E5; text-align: center;">
+            <div class="footer-content" style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
+                <img src="https://cdn.prod.website-files.com/663e51d3a107afd82b7ea0e4/663e530561808d3614beec2e_qrticklogo.svg" alt="QRTick" style="height: 32px; margin-bottom: 1rem;">
+                <p style="color: #666666; font-size: 0.9rem; margin-bottom: 1rem;">
+                    Leave the ticketing logistics to us and deliver a frictionless event experience
+                </p>
+                <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+        <a href="https://qrtick.com" target="_blank" rel="noopener noreferrer" style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">QRTick.com</a><a href="/blog"  style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">Blog</a><a href="https://docs.qrtick.com" target="_blank" rel="noopener noreferrer" style="color: #666666; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;">Documentation</a>
+                </div>
+                <p style="color: #666666; font-size: 0.9rem;">
+                    © QRTick Jamaica. All rights reserved.<br>QRTick is a service of <a href="https://incrementic.com" target="_blank" rel="noopener noreferrer" style="color: #666666; text-decoration: none; transition: color 0.2s;">Incrementic</a>
+                </p>
+            </div>
+        </footer>
+        
+</body>
+</html>
