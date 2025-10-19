@@ -399,7 +399,7 @@ class BlogGenerator:
                 <nav class="nav-links">
                     <a href="/blog" class="nav-link">Blog</a>
                     <a href="https://docs.qrtick.com" class="nav-link" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a href="https://qrtick.com" class="nav-link primary" target="_blank" rel="noopener noreferrer">Try QRTick</a>
+                    <a href="https://tally.so/r/nW4Nak" class="nav-link primary" target="_blank" rel="noopener noreferrer">Get Started with QRTick</a>
                 </nav>
             </div>
         </div>
@@ -783,7 +783,7 @@ class BlogGenerator:
                 <nav class="nav-links">
                     <a href="/blog" class="nav-link">Blog</a>
                     <a href="https://docs.qrtick.com" class="nav-link" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a href="https://qrtick.com" class="nav-link primary" target="_blank" rel="noopener noreferrer">Try QRTick</a>
+                    <a href="https://tally.so/r/nW4Nak" class="nav-link primary" target="_blank" rel="noopener noreferrer">Get Started with QRTick</a>
                 </nav>
             </div>
         </div>
