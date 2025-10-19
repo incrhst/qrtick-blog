@@ -1,6 +1,6 @@
 ---
 title: "Stop Guessing About Your Event Revenue - Now You Know Exactly What's Working"
-date: "June 10, 2025"
+date: "June 10, 2024"
 author: "QRTick Team"
 slug: "maximize-event-revenue-june-2025"
 excerpt: "New revenue analytics and real-time notifications help Jamaican event organizers make smarter decisions and maximize profits from every event."

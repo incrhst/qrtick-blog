@@ -1,7 +1,7 @@
 ---
 title: "How QRTick's October Updates Will Transform Your Event Management"
 excerpt: "Discover the powerful new features that will help you sell more tickets, manage revenue better, and provide a seamless experience for your attendees."
-date: "October 2025"
+date: "October 2024"
 author: "QRTick Team"
 tags: ["event management", "ticketing", "revenue optimization", "platform updates"]
 slug: "october-2024-platform-updates"

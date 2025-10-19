@@ -66,7 +66,7 @@ class BlogGenerator:
         
         # If all else fails, return a very old date so it appears last
         print(f"Warning: Could not parse date '{date_str}', using fallback")
-        return datetime.min
+        return datetime(2020, 1, 1)  # Use a specific date instead of datetime.min
     
     def get_html_template(self):
         """Modern HTML template inspired by clean blog designs"""

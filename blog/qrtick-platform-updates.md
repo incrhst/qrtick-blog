@@ -1,6 +1,6 @@
 ---
 title: "Three Ways We Just Made Your Events Easier"
-date: "May 2025"
+date: "May 2024"
 author: "QRTick Team"
 slug: "three-ways-we-made-events-easier"
 excerpt: "No technical jargon. No complicated features. Just three simple improvements that eliminate common organizer headaches."

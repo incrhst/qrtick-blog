@@ -1,6 +1,13 @@
-# How to Sell Tickets in Jamaica: A Complete Guide with QRTick
+---
+title: "How to Sell Tickets in Jamaica: A Complete Guide with QRTick"
+date: "October 18, 2024"
+author: "QRTick Team"
+slug: "how-to-sell-tickets-in-jamaica-qrtick-guide"
+excerpt: "Selling tickets in Jamaica has never been easier. Whether you're organizing a cultural event, business conference, or community gathering, QRTick provides the tools and support you need to sell tickets successfully across the island."
+tags: ["ticket-sales", "jamaica", "event-planning", "qrtick-guide", "online-tickets"]
+---
 
-*Published: October 18, 2025*
+# How to Sell Tickets in Jamaica: A Complete Guide with QRTick
 
 Selling tickets in Jamaica has never been easier. Whether you're organizing a cultural event, business conference, or community gathering, QRTick provides the tools and support you need to sell tickets successfully across the island.
 

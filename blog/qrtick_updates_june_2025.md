@@ -1,6 +1,6 @@
 ---
 title: "What's New for Your Upcoming Events"
-date: "June 2025"
+date: "June 2024"
 author: "QRTick Team"
 slug: "qrtick-platform-updates-june-2025"
 excerpt: "New tools to maximize revenue and control for your next event including digital programmes, individual event sales control, PayPal payments, and enhanced analytics."

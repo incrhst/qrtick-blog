@@ -1,6 +1,6 @@
 ---
 title: "Perfect Timing: Take Control of When Your Tickets Go on Sale"
-date: "June 4, 2025"
+date: "June 4, 2024"
 author: "QRTick Team"
 slug: "ticket-availability-control"
 excerpt: "New precise ticket timing controls let you create excitement, manage demand, and maximize revenue by controlling exactly when each ticket type becomes available for purchase."
