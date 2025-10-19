@@ -841,7 +841,7 @@ class BlogGenerator:
                     <div class="qrtick-overview" style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #FDC230;">
                         <h3 style="margin-top: 0; color: #2D2D2D;">About QRTick</h3>
                         <p style="margin-bottom: 0; color: #666666; line-height: 1.6;">
-                            QRTick is Jamaica's premier event management platform, designed for theatre events, technology conferences, hackathons, and community gatherings. We provide an all-inclusive digital ticketing solution that handles everything from setup to check-in, allowing event organisers to focus on content and attendee experience rather than ticketing logistics.
+                            Stop losing sleep over ticket sales and check-in chaos. QRTick handles the technical stuff so you can focus on what matters most - creating amazing experiences for your attendees.
                         </p>
                     </div>
                     
